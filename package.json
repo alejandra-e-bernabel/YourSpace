@@ -1,14 +1,12 @@
 {
   "name": "yourspace",
   "version": "1.0.0",
-  "description": "a simplistic social media page",
-  "main": "postcss.config.js",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
   "scripts": {
-    "build-css": "tailwindcss build src/style.css -o public/style.css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "tailwindcss": "^3.3.3"
-  }
+  "license": "ISC"
 }
