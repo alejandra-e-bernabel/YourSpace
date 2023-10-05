@@ -1,0 +1,19 @@
+{
+  "name": "yourspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "express": "^4.18.2",
+    "postcss": "^8.4.31"
+  }
+}

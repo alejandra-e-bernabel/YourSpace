@@ -1,0 +1,33 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Young Serif', serif; */
+}
+
+body {
+    background-color: #CBE6F4;
+}
+
+.blogHeader {
+    background-color: #1A1C3B;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.blogEl {
+    background-color:  #3F2F5B;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.blogButtonContainer {
+    display: flex;
+    justify-content: center;
+}
