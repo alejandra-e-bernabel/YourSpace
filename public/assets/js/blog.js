@@ -147,11 +147,6 @@ function deletePost(id) {
 
 //function to handle delete
 function handleDelete() {
-    // currentLi.stopPropagation();
-
-    // const blogPost = currentLi.target;
-    // const blogPostId = JSON.parse(blogPost.parentElement.getAttribute("data-note")).id;
-
     deletePost(savedID).then(() => {
         getAndRenderPosts();
     })
