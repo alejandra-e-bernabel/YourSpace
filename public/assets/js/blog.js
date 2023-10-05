@@ -128,7 +128,7 @@ async function renderPreviousPosts(posts) {
     });
 
     if (window.location.pathname === "/blog") {
-        blogListItems.forEach((note) => postList[0].append(note));
+        blogListItems.reverse().forEach((note) => postList[0].append(note));
     }
 }
 
