@@ -1,15 +1,21 @@
 //declared variables
 let postList;
+let saveBtn;
+let postTitle;
+let postText;
 
 
 if (window.location.pathname === "/blog") {
     postList = document.querySelectorAll(".list-container .list-group");
+    saveBtn = document.getElementById("newEntryButton");
+    postTitle = document.querySelector('.newPostTitle');
+    postText = document.querySelector(".newPostText");
 }
 
 
 // function that grabs notes using GET
 function getPreviousBlogPosts() {
-    fetch("api/blog", {
+    return fetch("api/blog", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -17,8 +23,42 @@ function getPreviousBlogPosts() {
     });
 }
 
+function savePost(post) {
+    return fetch('/api/blog', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(post),
+    });
+}
+
+function getPosts() {
+    return fetch('/api/blog', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+}
+
+function handleSave() {
+    const newPost = {
+        title: postTitle.value,
+        text: postText.value
+    };
+
+    savePost(newPost).then(() => {
+        getAndRenderPosts();
+    })
+}
+
+function getAndRenderPosts() {
+    getPosts().then(renderPreviousPosts);
+}
+
 //function that creates Li element
-function createLi (text) {
+function createLi(text) {
     const liEl = document.createElement("li");
     liEl.classList.add("list-group-item");
 
@@ -30,23 +70,23 @@ function createLi (text) {
 
     //add delete button
     const delBtnEl = document.createElement('i');
-      delBtnEl.classList.add(
+    delBtnEl.classList.add(
         'fas',
         'fa-trash-alt',
         'float-right',
         'text-danger',
         'delete-note'
-      );
+    );
 
-      delBtnEl.addEventListener('click', handleDelete);
+    delBtnEl.addEventListener('click', handleDelete);
 
-      liEl.append(delBtnEl);
+    liEl.append(delBtnEl);
 
-      return liEl;
+    return liEl;
 }
 
 //function that renders notes asynchronously
-async function renderPreviousPosts (posts) {
+async function renderPreviousPosts(posts) {
     let jsonNotes = await posts.json();
 
     //reset list content
@@ -62,7 +102,7 @@ async function renderPreviousPosts (posts) {
 
     jsonNotes.forEach((note) => {
         const li = createLi(note.title);
-        li.sataset.noe = JSON.stringify(note);
+        li.dataset.note = JSON.stringify(note);
 
         blogListItems.push(li);
     });
@@ -75,7 +115,7 @@ async function renderPreviousPosts (posts) {
 
 //function that deletes note
 function deletePost(id) {
-    fetch(`/api/blog/${id}`, {
+    return fetch(`/api/blog/${id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -84,7 +124,7 @@ function deletePost(id) {
 }
 
 //function to handle delete
-function handleDelete (e) {
+function handleDelete(e) {
     e.stopPropagation();
 
     const blogPost = e.target;
@@ -96,6 +136,15 @@ function handleDelete (e) {
     })
 }
 
+
+
 // function that saves new notes
 
-//event listener for the new button
+//event listener for the new post button
+if (window.location.pathname === '/blog') {
+    console.log("window entered");
+    saveBtn.addEventListener('click', function() {
+        console.log("button pressed");
+        handleSave();
+    });
+}
