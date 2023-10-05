@@ -6,11 +6,10 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers/userRoutes');
 //const dotenv = require('dotenv');
 
-
 //dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3306;
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
