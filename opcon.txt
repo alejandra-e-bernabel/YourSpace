@@ -1,0 +1,46 @@
+Title: Your Space Operational Concept
+
+Introduction
+
+The Your Space mobile application is designed to provide users with a highly customizable digital environment, allowing them to personalize their space's visuals, sound, and content. This operational concept description outlines key features, user interfaces, and workflows to guide the development and operation of the app. The core functionality of the app revolves around enabling users to customize their digital space. This includes options for adjusting visuals, sound settings, and managing content.
+
+Key Features
+
+Customization: Users can personalize their space with a wide range of customization options, including visual themes, background music, and content placement.
+
+Mobile-Friendly: The app is designed to be responsive and user-friendly on mobile devices, ensuring accessibility for a diverse user base.
+
+Home Page
+
+The home page consists of two major columns, and it includes a left navigation bar. The navigation bar controls include:
+Home: Returns users to the main page.
+Blog: Navigates to a new page dedicated to blog posts.
+Friends: Replaces "Favorites" and leads to a page where users can interact with their friends.
+Bulletin Board: This section may be replaced with music-related content or enhanced with interactive features to engage users.
+Settings include a profile edit button.
+
+
+New User Account Creation (Yana)
+new users supply their credentials (login and Password).  After supplying the credentials, the new user fills in the mandatory profile fields. User then clicks profile save and their account is created. After this the new user is automatically listed in the friends section. Optional profile fields include: avatars, profile images, and background music to personalize their profiles.
+
+Users can explore and enjoy music content, possibly starting with a song recommendation like "Good Riddance (Time of Your Life)" by Green Day.
+
+Friends Lists
+User's friends are represented through pictures or avatars. This section provides a visual representation of a user's social connections.
+
+Development Guidelines (alex/maddy)
+Apply CSS styling using Tailwind CSS, ensuring a responsive design and avoiding hard-coding for horizontal and vertical spacing.
+
+Music (Tom)
+The music section is a separate HTML page, allowing for easy management and updates.
+
+Color Palette (Nicole/Maddy)
+Nicole and Maddy will collaborate to define a suitable color palette using Coolers, ensuring a visually appealing and harmonious design.
+
+Database Design
+The app's database will consist of the following tables with appropriate relationships:
+Music: Contains music-related data and metadata.
+Friends: Stores information about a user's friends.
+Profile: Holds user profile information, including avatar, image, and background music choices.
+Blogs: Stores user-generated blog posts.
+
