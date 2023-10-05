@@ -58,13 +58,13 @@ function getAndRenderPosts() {
 }
 
 //function that creates Li element
-function createLi(text) {
+function createLi(blogTitle, blogText) {
     const liEl = document.createElement("li");
     liEl.classList.add("list-group-item");
 
     const spanEl = document.createElement("span");
     spanEl.classList.add('list-item-title');
-    spanEl.innerText = text;
+    spanEl.innerHTML = `<h4>${blogTitle}</h4><br><p>${blogText}</p>`;
 
     liEl.append(spanEl);
 
@@ -101,7 +101,7 @@ async function renderPreviousPosts(posts) {
     }
 
     jsonNotes.forEach((note) => {
-        const li = createLi(note.title);
+        const li = createLi(note.title, note.text);
         li.dataset.note = JSON.stringify(note);
 
         blogListItems.push(li);
@@ -148,3 +148,6 @@ if (window.location.pathname === '/blog') {
         handleSave();
     });
 }
+
+//render notes upon loading
+getAndRenderPosts();
