@@ -1,0 +1,22 @@
+{
+  "name": "yourspace",
+  "version": "1.0.0",
+  "description": "A modernized and simplistic version of a old favorite: MySpace ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build css/navbar.css -o public/styles.css",
+    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch"
+  },
+  "keywords": [
+    "node.js",
+    "tailwind",
+    "css",
+    "html"
+  ],
+  "author": "Nicole Torres",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
