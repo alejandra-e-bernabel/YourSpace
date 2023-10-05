@@ -1,11 +1,11 @@
-let blogTitle;
-let blogText;
-let saveBtn;
-// let newNoteBtn;
-let blogList;
+let noteTitle;
+let noteText;
+let saveNoteBtn;
+let newNoteBtn;
+let noteList;
 
-if (window.location.pathname === '/blog') {
-  blogTitle = document.querySelector('.note-title');
+if (window.location.pathname === '/notes') {
+  noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
