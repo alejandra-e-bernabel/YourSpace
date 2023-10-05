@@ -4,6 +4,9 @@ let saveBtn;
 let postTitle;
 let postText;
 
+let currentLi;
+let savedID;
+
 
 if (window.location.pathname === "/blog") {
     postList = document.querySelectorAll(".list-container .list-group");
@@ -59,31 +62,48 @@ function getAndRenderPosts() {
 
 //function that creates Li element
 function createLi(blogTitle, blogText) {
+
     const liEl = document.createElement("li");
     liEl.classList.add("list-group-item");
 
     const spanEl = document.createElement("span");
     spanEl.classList.add('list-item-title');
-    spanEl.innerHTML = `<h4>${blogTitle}</h4><br><p>${blogText}</p>`;
 
-    liEl.append(spanEl);
+    if (!blogText) {
+        spanEl.innerHTML = `<h6>${blogTitle}</h6>`;
+        liEl.append(spanEl);
+    } else {
+        spanEl.innerHTML = `<h4>${blogTitle}</h4><br><p>${blogText}</p>`;
 
-    //add delete button
-    const delBtnEl = document.createElement('i');
-    delBtnEl.classList.add(
-        'fas',
-        'fa-trash-alt',
-        'float-right',
-        'text-danger',
-        'delete-note'
-    );
+        liEl.append(spanEl);
 
-    delBtnEl.addEventListener('click', handleDelete);
+        //add delete button
+        const delBtnEl = document.createElement('i');
+        delBtnEl.classList.add(
+            'fas',
+            'fa-trash-alt',
+            'float-right',
+            'text-danger',
+            'delete-note'
+        );
 
-    liEl.append(delBtnEl);
+            delBtnEl.addEventListener("click", function(e) {
+                e.stopPropagation();
+
+                const note = e.target;
+                const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+
+                openPopup(noteId);
+            });
+        // delBtnEl.addEventListener('click', handleDelete);
+
+        liEl.append(delBtnEl);
+    }
 
     return liEl;
 }
+
+
 
 //function that renders notes asynchronously
 async function renderPreviousPosts(posts) {
@@ -115,6 +135,8 @@ async function renderPreviousPosts(posts) {
 
 //function that deletes note
 function deletePost(id) {
+    savedID="";
+    closePopup();
     return fetch(`/api/blog/${id}`, {
         method: "DELETE",
         headers: {
@@ -124,26 +146,47 @@ function deletePost(id) {
 }
 
 //function to handle delete
-function handleDelete(e) {
-    e.stopPropagation();
+function handleDelete() {
+    // currentLi.stopPropagation();
 
-    const blogPost = e.target;
-    const blogPostId = JSON.parse(blogPost.parentElement.getAttribute("data-note")).id;
+    // const blogPost = currentLi.target;
+    // const blogPostId = JSON.parse(blogPost.parentElement.getAttribute("data-note")).id;
 
-    deletePost(blogPostId).then(() => {
-        //I believe I need this .then since deletePost is a fetch call.
-        console.log("post deleted");
+    deletePost(savedID).then(() => {
+        getAndRenderPosts();
     })
 }
 
+//returns a random number of likes. To be used on posts.
+function randomLikes() {
+    return Math.floor(Math.random() * 200) + 1;
+}
+
+//returns a random number of dislikes. To be used on posts.
+function randomDislikes() {
+    return Math.floor(Math.random() * 50) + 1;
+}
 
 
 // function that saves new notes
 
+
+//functions to open and close delete popup
+function openPopup(ID) {
+    savedID = ID;
+    document.getElementById('popupContainer').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+}
+
+
+
 //event listener for the new post button
 if (window.location.pathname === '/blog') {
     console.log("window entered");
-    saveBtn.addEventListener('click', function() {
+    saveBtn.addEventListener('click', function () {
         console.log("button pressed");
         handleSave();
     });

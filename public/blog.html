@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/d69e454e9c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <h1 class="blogHeader">Your Blog</h1>
+
     <div class="blogEl">
         <div class="newPost">
             <input class="newPostTitle form-control" placeholder="Enter new post title"></input>
@@ -42,6 +45,16 @@
         </div>
     </div>
 
+
+    <div id="popupContainer" class="popupContainer">
+        <div class="popup">
+            <p>Are you sure you'd like to delete this post?</p>
+            <div class="popupButtons">
+                <button class="popupButton popupButtonDelete" onclick="handleDelete()">Yes, delete this post</button>
+                <button class="popupButton popupButtonBack" onclick="closePopup()">No, take me back</button>
+            </div>
+        </div>
+    </div>
 
 
 

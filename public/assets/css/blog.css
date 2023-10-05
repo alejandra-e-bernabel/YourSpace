@@ -5,6 +5,8 @@
     /* font-family: 'Young Serif', serif; */
 }
 
+/* main page styling */
+
 body {
     background-color: #CBE6F4;
 }
@@ -31,3 +33,44 @@ body {
     display: flex;
     justify-content: right;
 }
+
+/* delete popup styling */
+.popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .popupButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .popupButton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popupButtonDelete {
+    background-color: #A45556;
+    color: white;
+  }
+
+  .popupButtonBack {
+    background-color: #CEEAF7;
+    color: white;
+  }
