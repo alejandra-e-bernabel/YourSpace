@@ -1,5 +1,5 @@
-import { Sidenav, initTE } from "tw-elements";
-
+import { Sidenav, initTE } from "/node_modules/tw-elements";
+console.log("This is the start of navbar.js");
 initTE({ Sidenav });
 
 document.getElementById("slim-toggler").addEventListener("click", () => {

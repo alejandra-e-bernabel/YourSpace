@@ -165,12 +165,12 @@
 <div id="slim-content" class="flex !pl-[77px]">
   <!-- Toggler -->
   <button
-    class="mr-1 mt-10 inline-block rounded bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
+    class="mr-1 mt-10 inline-block rounded bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
     data-te-sidenav-toggle-ref
     data-te-target="#sidenav-4"
     aria-controls="#sidenav-4"
     aria-haspopup="true">
-    <span class="block [&>svg]:h-5 [&>svg]:w-5 [&>svg]:text-white">
+    <span class="block [&>svg]:h-5 [&>svg]:w-5 [&>svg]:text-black">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -183,14 +183,10 @@
       </svg>
     </span>
   </button>
-  <!-- Toggler -->
-  <button
-    class="mt-10 inline-block rounded bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
-    aria-haspopup="true"
-    id="slim-toggler">
-    Toggle Slim
-  </button>
 </div>
-<script src="/js/navbar.js"></script>
+<script type="module" src="/js/navbar.js"></script>
+<script
+  type="text/javascript"
+  src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </body>
 </html>
