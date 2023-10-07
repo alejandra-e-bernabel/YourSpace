@@ -7,11 +7,12 @@ module.exports = {
   theme: {
     colors: {
       'white': '',
-      'bluey': '#CEEAF7',
-      'violent': '#4B3269',
-      'mauve': '#B55A5F',
-      'rblack': '#0B0E14',
-      'cadet': '#1D1D46',
+      'french': '#AEB3CC',
+      'marian': '#26398C',
+      'arylide': '#EAD96C',
+      'medium': '#7673BF',
+      'buff': '#D89C83',
+
     },
     extend: {},
   },
