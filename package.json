@@ -12,8 +12,5 @@
     "start": "npm run build && live-server"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "flowbite": "^1.8.1"
-  }
+  "license": "ISC"
 }
