@@ -1,6 +1,8 @@
+
 * {
 font-family: 'Young Serif', serif;
 }
+
 
 @tailwind base;
 @tailwind components;
