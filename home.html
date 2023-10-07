@@ -18,117 +18,120 @@
     </div>
 </header> -->
 
-<body class="flex justify-center p-6">
-<div class="flex flex-col space-y-2 mr-10">
-    <div class="w-full max-w-sm bg-white border border-buff rounded-lg shadow">
-        <div class="flex justify-end px-4 pt-4">
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
-                class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
-                type="button">
-                <span class="sr-only">Open dropdown</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                    viewBox="0 0 16 3">
-                    <path
-                        d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-                </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div id="dropdown"
-                class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                <ul class="py-2" aria-labelledby="dropdownButton">
-                    <li>
+<body class="bg-cover bg-center bg-fixed md:bg-cover" style='background-image: url("img/dario-bronnimann-hNQwIirOseE-unsplash.jpg")'>
+    <main class="flex justify-center p-6">
+        <div class="flex flex-col space-y-2 mr-10">
+            <div class="w-full max-w-sm bg-white border border-arylide rounded-lg shadow">
+                <div class="flex justify-end px-4 pt-4">
+                    <button id="dropdownButton" data-dropdown-toggle="dropdown"
+                        class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+                        type="button">
+                        <span class="sr-only">Open dropdown</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 16 3">
+                            <path
+                                d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdown"
+                        class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2" aria-labelledby="dropdownButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                                    Data</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center p-6">
+                    <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg"
+                        alt="placeholder image" />
+                    <h5 class="mb-1 text-2xl font-medium text-marian">Your Name</h5>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Brief Bio: Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Aspernatur commodi, natus quia, non autem, consequatur hic velit provident accusantium
+                        nostrum
+                        cumque. Repellat, nisi vel ea eius architecto corrupti iure amet.</span>
+                    <div class="flex mt-4 space-x-3 md:mt-6">
                         <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
-                    </li>
-                    <li>
+                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
+                            friend</a>
                         <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
-                            Data</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                    </li>
-                </ul>
+                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
+                    </div>
+                </div>
+            </div>
+            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-blue">
+                <div class="bg-buff text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Contacting card</h5>
+                </div>
+                <a href="#">
+                    <p>Send message</p>
+                </a>
+                <a href="#">
+                    <p>Friend list</p>
+                </a>
+                <a href="#">
+                    <p>Blog</p>
+                </a>
+            </div>
+            <div
+                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div class="bg-buff text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Music card</h5>
+                </div>
+                <p>Here is the music I like.</p>
             </div>
         </div>
-        <div class="flex flex-col items-center p-6">
-            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg"
-                alt="placeholder image" />
-            <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Your Name</h5>
-            <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Aspernatur commodi, natus quia, non autem, consequatur hic velit provident accusantium nostrum
-                cumque. Repellat, nisi vel ea eius architecto corrupti iure amet.</span>
-            <div class="flex mt-4 space-x-3 md:mt-6">
-                <a href="#"
-                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
-                    friend</a>
-                <a href="#"
-                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
+        <div class="flex flex-col space-y-4">
+            <div
+                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div class="bg-buff p-4 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Bulletin Board Placeholder</h5>
+                </div>
+                <p>entry 1</p>
+                <p class="bg-french text-white">entry 2</p>
+                <p>entry 3</p>
+                <p class="bg-french text-white">entry 4</p>
+                <p>entry 5</p>
             </div>
-        </div>
-    </div>
-    <div class="block max-w-sm p-6 bg-white border border-buff rounded-lg shadow hover:bg-blue">
-        <div class="bg-arylide text-center">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Contacting card</h5>
-        </div>
-        <a href="#">
-            <p>Send message</p>
-        </a>
-        <a href="#">
-            <p>Friend list</p>
-        </a>
-        <a href="#">
-            <p>Blog</p>
-        </a>
-    </div>
-    <div
-        class="block max-w-sm p-6 bg-white border border-buff rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-        <div class="bg-arylide text-center">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Music card</h5>
-        </div>
-        <p>Here is the music I like.</p>
-    </div>
-</div>
-    <div class="flex flex-col space-y-4">
-    <div
-        class="block max-w-sm p-6 bg-white border border-buff rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-        <div class="bg-arylide p-4 text-center">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Bulletin Board Placeholder</h5>
-        </div>
-        <p>entry 1</p>
-        <p class="bg-french text-white">entry 2</p>
-        <p>entry 3</p>
-        <p class="bg-french text-white">entry 4</p>
-        <p>entry 5</p>
-    </div>
 
-        <div
-            class="block max-w-sm p-6 bg-white border border-buff rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <div class="bg-arylide p-4 text-center">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Top Friends</h5>
+            <div
+                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div class="bg-buff p-4 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Top Friends</h5>
+                </div>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
+                    <p>Friend 1</p>
+                </a>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
+                    <p>Friend 2</p>
+                </a>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
+                    <p>Friend 3</p>
+                </a>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
+                    <p>Friend 4</p>
+                </a>
             </div>
-            <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                    src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
-                <p>Friend 1</p>
-            </a>
-            <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                    src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
-                <p>Friend 2</p>
-            </a>
-            <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                    src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
-                <p>Friend 3</p>
-            </a>
-            <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                    src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
-                <p>Friend 4</p>
-            </a>
         </div>
-    </div>
 
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    </main>
 </body>
 
 </html>
-

@@ -1393,6 +1393,11 @@ input:checked + .toggle-bg {
   border-width: 0px;
 }
 
+.border-arylide {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 217 108 / var(--tw-border-opacity));
+}
+
 .border-blue-600 {
   --tw-border-opacity: 1;
   border-color: rgb(28 100 242 / var(--tw-border-opacity));
@@ -1401,11 +1406,6 @@ input:checked + .toggle-bg {
 .border-blue-700 {
   --tw-border-opacity: 1;
   border-color: rgb(26 86 219 / var(--tw-border-opacity));
-}
-
-.border-buff {
-  --tw-border-opacity: 1;
-  border-color: rgb(216 156 131 / var(--tw-border-opacity));
 }
 
 .border-gray-100 {
@@ -1418,14 +1418,14 @@ input:checked + .toggle-bg {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.bg-arylide {
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 217 108 / var(--tw-bg-opacity));
-}
-
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
+}
+
+.bg-buff {
+  --tw-bg-opacity: 1;
+  background-color: rgb(216 156 131 / var(--tw-bg-opacity));
 }
 
 .bg-french {
@@ -1464,6 +1464,18 @@ input:checked + .toggle-bg {
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .p-1 {
@@ -1855,5 +1867,9 @@ input:checked + .toggle-bg {
 @media (min-width: 768px) {
   .md\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .md\:bg-cover {
+    background-size: cover;
   }
 }
