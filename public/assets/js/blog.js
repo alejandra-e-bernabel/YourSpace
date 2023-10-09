@@ -61,7 +61,7 @@ function getAndRenderPosts() {
 }
 
 //function that creates Li element
-function createLi(blogTitle, blogText) {
+function createLi(blogTitle, blogText, datePosted, likes, dislikes) {
 
     const liEl = document.createElement("li");
     liEl.classList.add("list-group-item");
@@ -73,7 +73,7 @@ function createLi(blogTitle, blogText) {
         spanEl.innerHTML = `<h6>${blogTitle}</h6>`;
         liEl.append(spanEl);
     } else {
-        spanEl.innerHTML = `<h4>${blogTitle}</h4><br><p>${blogText}</p>`;
+        spanEl.innerHTML = `<h4>${blogTitle}</h4><br><p>${blogText}</p><div class=likesDislikesDate><div class=likesAndDislikes><div class= likes><i class="fa-regular fa-thumbs-up" style="color: #ffffff;"></i> ${likes}</div><div class = dislikes><i class="fa-regular fa-thumbs-up fa-rotate-180" style="color: #ffffff;"></i> ${dislikes}</div></div><p class="datePosted pushRight">Posted on ${datePosted}</p></div>`;
 
         liEl.append(spanEl);
 
@@ -87,15 +87,14 @@ function createLi(blogTitle, blogText) {
             'delete-note'
         );
 
-            delBtnEl.addEventListener("click", function(e) {
-                e.stopPropagation();
+        delBtnEl.addEventListener("click", function (e) {
+            e.stopPropagation();
 
-                const note = e.target;
-                const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+            const note = e.target;
+            const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
 
-                openPopup(noteId);
-            });
-        // delBtnEl.addEventListener('click', handleDelete);
+            openPopup(noteId);
+        });
 
         liEl.append(delBtnEl);
     }
@@ -121,7 +120,7 @@ async function renderPreviousPosts(posts) {
     }
 
     jsonNotes.forEach((note) => {
-        const li = createLi(note.title, note.text);
+        const li = createLi(note.title, note.text, note.datePosted, note.likes, note.dislikes);
         li.dataset.note = JSON.stringify(note);
 
         blogListItems.push(li);
@@ -135,7 +134,7 @@ async function renderPreviousPosts(posts) {
 
 //function that deletes note
 function deletePost(id) {
-    savedID="";
+    savedID = "";
     closePopup();
     return fetch(`/api/blog/${id}`, {
         method: "DELETE",
@@ -152,17 +151,6 @@ function handleDelete() {
     })
 }
 
-//returns a random number of likes. To be used on posts.
-function randomLikes() {
-    return Math.floor(Math.random() * 200) + 1;
-}
-
-//returns a random number of dislikes. To be used on posts.
-function randomDislikes() {
-    return Math.floor(Math.random() * 50) + 1;
-}
-
-
 // function that saves new notes
 
 
@@ -176,8 +164,6 @@ function closePopup() {
     document.getElementById('popupContainer').style.display = 'none';
 }
 
-
-
 //event listener for the new post button
 if (window.location.pathname === '/blog') {
     console.log("window entered");
@@ -185,6 +171,7 @@ if (window.location.pathname === '/blog') {
         console.log("button pressed");
         handleSave();
     });
+
 }
 
 //render notes upon loading

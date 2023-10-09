@@ -22,9 +22,11 @@
 
     <div class="blogEl">
         <div class="newPost">
-            <input class="newPostTitle form-control" placeholder="Enter new post title"></input>
-            <input class="newPostText form-control" placeholder="What's on your mind?"></input>
+            <input class="newPostTitle form-control form-control-lg" placeholder="Enter new post title"></input>
+            <br>
+            <textarea class="newPostText form-control" placeholder="What's on your mind?"></textarea>
         </div>
+        <br>
         <div class="blogButtonContainer">
             <button type="button" id="newEntryButton" class="newEntryButton btn btn-light">Post new entry</button>
         </div>
@@ -34,7 +36,7 @@
         <br><br>
 
         <div class=previousPosts>
-            <h2 class=blogHeader>Previous Posts</h2>
+            <h2 class=previousPostHeader>Previous Posts</h2>
             <div>
                 <div class="list-container">
                     <div class="card">
@@ -48,10 +50,12 @@
 
     <div id="popupContainer" class="popupContainer">
         <div class="popup">
-            <p>Are you sure you'd like to delete this post?</p>
+            <div class="centerContent">
+                <p>Are you sure you'd like to <b>permanently</b> delete this post? <br>This change cannot be undone.</p>
+            </div>
             <div class="popupButtons">
-                <button class="popupButton popupButtonDelete" onclick="handleDelete()">Yes, delete this post</button>
-                <button class="popupButton popupButtonBack" onclick="closePopup()">No, take me back</button>
+                <button class="popupButton popupButtonDelete" onclick="handleDelete()">Yes, permanently delete this post</button>
+                <button class="popupButton popupButtonBack" onclick="closePopup()">No, take me back!</button>
             </div>
         </div>
     </div>

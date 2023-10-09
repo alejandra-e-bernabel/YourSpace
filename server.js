@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 const fs = require('fs');
+const getTimeAndDate = require ("./public/assets/js/timeandDate.js");
+const getLikesandDislikes = require("./public/assets/js/likesAndDislikes.js");
 
 //unique ID generator
 const { v4: uuidv4 } = require('uuid');
@@ -79,7 +81,10 @@ app.post("/api/blog", (req, res) => {
         response = {
             title: req.body.title,
             text: req.body.text,
-            id: uuidv4()  //give item ID, this will help with displaying and deleting saved notes.
+            id: uuidv4(),  //give item ID, this will help with displaying and deleting saved notes.
+            datePosted : getTimeAndDate(),
+            likes : getLikesandDislikes.randomLikes(),
+            dislikes : getLikesandDislikes.randomDislikes()
         };
 
         res.json("Blog post with title " + response.title + " has been added")

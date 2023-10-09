@@ -8,19 +8,28 @@
 /* main page styling */
 
 body {
-    background-color: #CBE6F4;
+    background-color: #AEB3CC;
 }
 
 .blogHeader {
-    background-color: #1A1C3B;
+    background-color: #263A8C;
     color: white;
     text-align: center;
     padding: 10px;
     margin-bottom: 20px;
 }
 
+.previousPostHeader {
+    background-color: #263A8C;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px
+}
+
 .blogEl {
-    background-color:  #3F2F5B;
+    background-color:  #7773BF;
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
@@ -57,6 +66,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    gap: 10px;
   }
 
   .popupButton {
@@ -72,5 +82,38 @@ body {
 
   .popupButtonBack {
     background-color: #CEEAF7;
+  }
+
+  .centerContent {
+    text-align: center;
+  }
+
+  .pushRight {
+    text-align: right;
+  }
+
+  .datePosted{
+    color:grey;
+  }
+
+  .likesDislikesDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .likesAndDislikes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .likes, .dislikes {
+    background-color: #263A8C;
     color: white;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 100px;    
+    text-align: center;
   }
