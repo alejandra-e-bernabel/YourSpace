@@ -2,8 +2,6 @@ const Sequelize = require('sequelize');
 
 const URI = process.env.MYSQLURI;
 
-const sequelize = new Sequelize(URI, {
-dialect: 'mysql', // Specify the dialect you are using (e.g., 'mysql', 'postgres', etc.)
-});
+const sequelize = new Sequelize(URI);
 
 module.exports = sequelize;
