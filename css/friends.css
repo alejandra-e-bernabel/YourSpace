@@ -1,14 +1,13 @@
 .avatar{
 border-radius: 50%;
 border: 3px solid rgb(238, 226, 12);
-width: 120px; 
+width: 100px; 
     
 }
 .container{
-width: 65%;
+width: 69%;
 border: 3px solid   #26398C;
 padding-bottom: 20px;
-padding-left: 30px;
 text-align: center;
 background-color: #EAD96C;
 color: #26398C;
@@ -20,10 +19,10 @@ justify-content: space-evenly;
 }
 
 
-p {
-width: 100px;
+.name {
+width: 150px;
 font-weight: bold;
-font-size: 1.3rem;
+font-size: 1rem;
 overflow-wrap: break-word;
 color: #26398C;
 }
