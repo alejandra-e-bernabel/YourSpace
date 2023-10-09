@@ -1,8 +1,4 @@
-CREATE DATABASE IF NOT EXISTS your_space_credentials;
+DROP DATABASE IF EXISTS your_space_credentials;
+CREATE DATABASE your_space_credentials;
 USE your_space_credentials;
 
-CREATE TABLE IF NOT EXISTS Users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(255) NOT NULL UNIQUE,
-  password VARCHAR(255) NOT NULL
-);
