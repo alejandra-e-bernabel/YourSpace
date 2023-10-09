@@ -5,15 +5,15 @@
 This web application interface is a blast from the past as it replicates the nostalgic feel of what was known as MySpace but with a modern and simplistic twist.It will be completely interactve with the customization of your avatar/profile info,background color, music upon opening page, top 5 favorite songs ,your top 5 best friends,as well as a bulletin board and a blog section for personalization. 
 
 ## Table of Contents
-[Description](#description)
-[Badges](#badges)
-[Installation](#install)
-[User-story](#user-story)
-[Usage](#usage)
-[License](#license)
-[Contributing](#contributing)
-[GitHub-repository](#github-repository)
-[Deployed-application-link](#deployed-application-link)
+- [Description](#description)
+- [Badges](#badges)
+- [Installation](#install)
+- [User-story](#user-story)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [GitHub-repository](#github-repository)
+- [Deployed-application-link](#deployed-application-link)
 
 ## Badges
 - ![dotenv](https://img.shields.io/badge/dotenv-blue.svg)
@@ -36,9 +36,9 @@ This web application interface is a blast from the past as it replicates the nos
 git clone git@github.com:alejandra-e-bernabel/YourSpace.git
 ```
 2. Open the cloned respository in any source code editor
-3. Open the integrated terminal for the document
+3. Open the integrated terminal for the document and enter this code to install the dependencies
 ```
-enter cli: npm install //install the dependencies
+npm install 
 ```
     
 ## User-Story
