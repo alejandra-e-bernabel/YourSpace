@@ -66,6 +66,7 @@ main {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
   color: var(--text-secondary);
+  background-image: url("/images/space.jpg");
 }
 
 .link-text {
@@ -92,12 +93,13 @@ main {
   font-weight: bolder;
   margin-bottom: 1rem;
   text-align: center;
-  background:  #26398C;
+  background-image: url("/images/space.jpg");/* #26398C; */
   font-size: 1.7rem;
   letter-spacing: 0.3ch;
   width: 100%;
   
 }
+
 
 .logo-text
 {
@@ -172,7 +174,7 @@ main {
   }
 }
 
-.dark {
+/* .dark {
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
@@ -195,9 +197,9 @@ main {
 
 .theme-icon {
   display: none;
-}
+} */
 
-.dark #darkIcon {
+/* .dark #darkIcon {
   display: block;
 }
 
@@ -207,4 +209,4 @@ main {
 
 .solar #solarIcon {
   display: block;
-}
+} */
