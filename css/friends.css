@@ -1,0 +1,26 @@
+.avatar{
+border-radius: 50%;
+border: 3px solid rgb(238, 226, 12);
+width: 120px; 
+    
+}
+.container{
+width: 65%;
+border: 3px solid  rgb(236, 222, 17);
+padding-bottom: 40px;
+padding-left: 30px;
+text-align: center;
+background-color: rgb(245, 245, 159);
+}
+.container1{
+display: flex;
+justify-content: space-evenly;
+}
+
+
+p {
+    width: 100px;
+font-weight: bold;
+font-size: 1.3rem;
+overflow-wrap: break-word;
+}
