@@ -12,12 +12,14 @@
     <link href="/dist/output.css" rel="stylesheet">
     <title>Homepage Bulletin Board</title>
 </head>
+<!-- this is the header featuring original artwork for the logo and typography -->
 <header>
     <div class="flex flex-col items-center">
-            <img src="/img/Spaceman.PNG" alt="Logo" class="h-50 w-20">
-            <img src="img/your space gradient.PNG" alt="YourSpace" class="h-50 w-20">
+        <img src="/img/Spaceman.PNG" alt="Logo" class="h-50 w-20">
+        <img src="img/your space gradient.PNG" alt="YourSpace" class="h-50 w-20">
     </div>
 </header>
+<!-- the profile card featuring the user profile avatar -->
 
 <body class="bg-cover bg-center bg-fixed md:bg-cover"
     style='background-image: url("img/dario-bronnimann-hNQwIirOseE-unsplash.jpg")'>
@@ -59,6 +61,7 @@
                     <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg"
                         alt="placeholder image" />
                     <h5 class="mb-1 text-2xl font-medium text-marian">Your Name</h5>
+                    <!-- you can add a brief bio below -->
                     <span class="text-sm text-gray-500 dark:text-gray-400">Brief Bio: Lorem ipsum dolor sit amet
                         consectetur
                         adipisicing
@@ -74,6 +77,7 @@
                     </div>
                 </div>
             </div>
+            <!-- contact card section, this will take you to various links thruout the page  -->
             <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-blue">
                 <div class="bg-buff text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Contacting card</h5>
@@ -88,6 +92,7 @@
                     <p>Blog</p>
                 </a>
             </div>
+            <!-- music card where you can feature your fav songs -->
             <div
                 class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div class="bg-buff text-center">
@@ -96,19 +101,15 @@
                 <p>Here is the music I like.</p>
             </div>
         </div>
+        <!-- the bulletin board allows the user to post short snippets of comments  -->
         <div class="flex flex-col space-y-4">
             <div
                 class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div class="bg-buff p-4 text-center">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Bulletin Board Placeholder</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Bulletin Board</h5>
                 </div>
-                <p>entry 1</p>
-                <p class="bg-french text-white">entry 2</p>
-                <p>entry 3</p>
-                <p class="bg-french text-white">entry 4</p>
-                <p>entry 5</p>
             </div>
-
+            <!-- you can add and delete your top friends for other users to see  -->
             <div
                 class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div class="bg-buff p-4 text-center">
@@ -135,6 +136,7 @@
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="bulletin.js"></script>
 </body>
 
 </html>
