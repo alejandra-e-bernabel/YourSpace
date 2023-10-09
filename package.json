@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "tailwindcss build css/navbar.css -o public/styles.css",
-    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch"
+    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch",
+    "start": "node server.js"
   },
   "keywords": [
     "node.js",
@@ -19,8 +20,11 @@
   "dependencies": {
 
     "tailwindcss": "^3.3.3",
-    "tw-elements": "^1.0.0"
+    "tw-elements": "^1.0.0",
+    "autoprefixer": "^10.4.16",
+    "express": "^4.18.2",
+    "postcss": "^8.4.31",
+    "uuid": "^9.0.1"
 
-    "tailwindcss": "^3.3.3"
   }
 }
