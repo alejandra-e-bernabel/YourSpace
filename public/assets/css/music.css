@@ -1,0 +1,26 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Young Serif', serif; */
+}
+
+/* main page styling */
+
+body {
+    background-color: #AEB3CC;
+}
+
+.musicHeader {
+    background-color: #263A8C;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.musicButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

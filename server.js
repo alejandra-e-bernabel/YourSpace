@@ -25,6 +25,11 @@ app.get("/blog", (req, res) =>
     res.sendFile(path.join(__dirname, "/public/blog.html"))
 );
 
+// localhost:3001/music will take us to /public/music.html
+app.get("/music", (req, res) =>
+    res.sendFile(path.join(__dirname, "/public/music.html"))
+);
+
 // localhost:3001/api/blog will display saved blog posts JSON
 app.get("/api/blog", (req, res) => {
     fs.readFile("./db/blog.json", "utf-8", (err, data) => {
