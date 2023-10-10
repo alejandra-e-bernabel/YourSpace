@@ -3,7 +3,7 @@ const express = require("express");
 const routes = require("./routes");
 const sequelize = require("./config/connection.js");
 
-const People = require("./models/friends-model");
+const Friends = require("./models/friends-model");
 
 const app = express();
 const PORT = process.env.PORT || 4000;

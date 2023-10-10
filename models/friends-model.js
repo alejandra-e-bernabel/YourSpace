@@ -2,14 +2,22 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class People extends Model {}
+class Friend extends Model {}
 
-People.init(
+Friend.init(
   {
     id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull: false,
+    },
+    friend_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    image_path: {
+      type: DataTypes.BLOB,
       allowNull: false,
     },
   },
@@ -18,8 +26,8 @@ People.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "people",
+    modelName: "friends",
   }
 );
 
-module.exports = People;
+module.exports = Friend;
