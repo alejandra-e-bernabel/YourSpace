@@ -77,19 +77,20 @@
                 <div class="bg-buff text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Contacting card</h5>
                 </div>
-                <a href="#">
-                    <p>Send message</p>
-                </a>
-                <a href="#">
-                    <p>Friend list</p>
-                </a>
-                <a href="#">
-                    <p>Blog</p>
-                </a>
+                <div class="flex flex-col items-center">
+                    <a href="#">
+                        <button type="button" class="text-medium hover:text-white border border-blue-700 hover:bg-arylide focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Send Message</button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="text-medium hover:text-white border border-blue-700 hover:bg-arylide focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Friends List</button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="text-medium hover:text-white border border-blue-700 hover:bg-arylide focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Blog</button>
+                    </a>
+                </div>
             </div>
             <!-- music card where you can feature your fav songs -->
-            <div
-                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
                 <div class="bg-buff text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Music card</h5>
                 </div>
@@ -98,8 +99,7 @@
         </div>
         <!-- the bulletin board allows the user to post short snippets of comments  -->
         <div class="flex flex-col space-y-4 flex-shrink">
-            <div
-                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
                 <div class="bg-buff p-4 text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Bulletin Board</h5>
                 </div>
@@ -108,23 +108,28 @@
                 </div>
                 <div class="post-container">
                     <textarea name="comment" class="bulletin-board" cols="37" rows="2"></textarea>
-                    <button id="saveBtn" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Post</button>
-                    <button id="deleteBtn" type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button>
+                    <button id="saveBtn" type="button"
+                        class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Post</button>
+                    <button id="deleteBtn" type="button"
+                        class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button>
                 </div>
                 <div class="post-container">
                     <textarea name="comment" class="bulletin-board" cols="37" rows="2"></textarea>
-                    <button id="saveBtn" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Post</button>
-                    <button id="deleteBtn" type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button>
+                    <button id="saveBtn" type="button"
+                        class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Post</button>
+                    <button id="deleteBtn" type="button"
+                        class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button>
                 </div>
                 <div class="post-container">
                     <textarea name="comment" class="bulletin-board" cols="37" rows="2"></textarea>
-                    <button id="saveBtn" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Post</button>
-                    <button id="deleteBtn" type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button>
+                    <button id="saveBtn" type="button"
+                        class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Post</button>
+                    <button id="deleteBtn" type="button"
+                        class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button>
                 </div>
             </div>
             <!-- you can add and delete your top friends for other users to see  -->
-            <div
-                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
                 <div class="bg-buff p-4 text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Top Friends</h5>
                 </div>

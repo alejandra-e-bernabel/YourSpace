@@ -851,6 +851,11 @@ video {
   color: rgb(38 57 140 / var(--tw-text-opacity));
 }
 
+.text-medium {
+  --tw-text-opacity: 1;
+  color: rgb(118 115 191 / var(--tw-text-opacity));
+}
+
 .text-white {
   color: ;
 }
@@ -867,8 +872,17 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:bg-arylide:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 217 108 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gradient-to-br:hover {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.hover\:text-white:hover {
+  color: ;
 }
 
 .focus\:outline-none:focus {
