@@ -1,27 +1,49 @@
-const { People } = require('../models');
+const { Friend } = require('../models/friends-model.js');
 
-const peopleData = [
+const friendData = [
   {
-    person_name: 'John Wayne'
+    friend_name: "Madeleine Abraham",
+    image_path: "/images/friend-Madeleine.jpg",
   },
   {
-    person_name: 'Catherine Smith'
-    
+    friend_name: "Yana Mishyna",
+    image_path: "/images/friend-Yana.jpg",
   },
   {
-    person_name: 'Max Rodriguez'
-    
+    friend_name: "Alejandra Bernabel",
+    image_path: "/images/friend-Alejandra.jpg",
   },
   {
-    person_name: 'Felipe Santiago'
-   
+    friend_name: "Nicole Torres",
+    image_path: "/images/friend-Nicole.jpg",
   },
   {
-    person_name: 'Suzy Johnston'
-    
+    friend_name: "Tom Fusco",
+    image_path: "/images/friend-Tom.jpg",
+  },
+  {
+    friend_name: "John Wayne",
+    image_path: "/images/friend-John.jpg",
+  },
+  {
+    friend_name: "Catherine Smith",
+    image_path: "/images/friend-Catherine.jpg",
+  },
+  {
+    friend_name: "Max Rodriguez",
+    image_path: "/images/friend-Max.jpg",
+  },
+  {
+    friend_name: "Felipe Santiago",
+    image_path: "/images/friend-Felipe.jpg",
+  },
+  {
+    friend_name: "Suzy Johnston",
+    image_path: "/images/friend-Suzy.jpg",
   },
 ];
 
-const seedPeople = () => People.bulkCreate(peopleData);
+const seedFriends = () => Friend.bulkCreate(friendData);
 
-module.exports = seedPeople;
+module.exports = seedFriends;
+

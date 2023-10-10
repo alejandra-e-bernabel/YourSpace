@@ -73,9 +73,9 @@ main {
   display: none;
   margin-left: 1rem;
 }
-.link-text:hover{
-   transform: scale(1.2);
-}
+/* .link-text:hover{
+   /* transform: scale(1.2); 
+} */
 
 .nav-link svg {
   width: 2rem;
