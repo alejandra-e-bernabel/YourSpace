@@ -673,6 +673,10 @@ video {
   max-width: 24rem;
 }
 
+.flex-shrink {
+  flex-shrink: 1;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -683,6 +687,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
