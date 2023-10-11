@@ -1,26 +1,51 @@
 const router = require('express').Router();
-const { People } = require('../models');
+const Friend = require("../models/friends-model.js");
 
-
-
-router.get('/:id', (req, res) => {
-   People.findOne({
+router.get('/friend/:id', (req, res) => {
+   Friend.findByPk({
      where: {
        id: req.params.id,
      },
    })
-     .then((people) => {
-       res.json(people);
+     .then((friend) => {
+       res.json(friend);
      })
      .catch((error) => {
        console.log(error);
-       res.status(400).json(error);
+       return res.status(404).send('Friend not found');
      });
 
 });
 
+// const imageUrl = /images/Friend.image_path;
+// const html = <img src="${imageUrl}" alt="Friend Image"/>;
+// res.send(html);
+// .then((friend) => {
+//     res.status(200).json(friend);
+//   }).catch((error) => {
+//     console.error('Unable to fetch friend:', error);
+//     res.status(500).send('Error fetching friend');
+//   });
+
+// const imageUrl = "/images/Friend.image_path";
+// const html = <img src="${imageUrl}" alt="Friend Image"/>;
+
+// res.send(html);
+
+// then((friend) => {
+//   res.status(200).json(friend);
+// }).catch((error) => {
+//   console.error('Unable to fetch friend:', error);
+//   res.status(500).send('Error fetching friend');
+// });
+
+
+
+
+
+
 router.put('/:id', (req, res) => {
-  People.update(req.body, {
+ Friend.update(req.body, {
     where: {
       id: req.params.id,
     },
@@ -33,7 +58,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-   People.destroy({
+   Friend.destroy({
      where: {
        id: req.params.id,
      },
@@ -47,4 +72,4 @@ router.delete('/:id', (req, res) => {
 });
 
 
-module.exports = app;
+module.exports = router;

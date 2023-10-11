@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const routes = require("./routes");
+const routes = require("./routes/friends-route.js");
 const sequelize = require("./config/connection.js");
 
 const Friends = require("./models/friends-model");
