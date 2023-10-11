@@ -1,4 +1,4 @@
-const { Friend } = require('../models/friends-model.js');
+const Friend = require('../models/friends-model.js');
 
 const friendData = [
   {
@@ -30,8 +30,8 @@ const friendData = [
     image_path: "/images/friend-Catherine.jpg",
   },
   {
-    friend_name: "Max Rodriguez",
-    image_path: "/images/friend-Max.jpg",
+    friend_name: "Alexandra Rodriguez",
+    image_path: "/images/friend-Alexandra.jpg",
   },
   {
     friend_name: "Felipe Santiago",
