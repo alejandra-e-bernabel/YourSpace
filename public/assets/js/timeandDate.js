@@ -3,7 +3,7 @@ function getTimeAndDate() {
     const year = date.getFullYear();
     const month = date.getMonth();
     const day = date.getDay();
-    const hour = date.getHours();
+    let hour = date.getHours();
 
     let hourString = "";
 

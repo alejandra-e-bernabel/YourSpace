@@ -8,7 +8,8 @@
 /* main page styling */
 
 body {
-    background-color: #AEB3CC;
+    /* background-color: #AEB3CC; */
+    background-image: url("../dario-bronnimann-hNQwIirOseE-unsplash.jpg");
 }
 
 .blogHeader {
