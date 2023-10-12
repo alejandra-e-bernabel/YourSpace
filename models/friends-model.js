@@ -15,10 +15,12 @@ Friend.init(
     },
     friend_name: {
       type: DataTypes.STRING,
+      primaryKey: true,
       allowNull: false,
     },
     image_path: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING,
+      primaryKey: true,
       allowNull: false,
     },
   },
