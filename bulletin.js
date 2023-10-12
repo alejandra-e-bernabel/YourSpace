@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    let lastLoginTime = 1634035200000;
+    let lastLoginDate = moment(lastLoginTime).format("MMMM Do, YYYY [at] h:mm A");
+    $("#lastLogin").text("Last Login: " + lastLoginDate);
     //event listener on save buttons
     //this will aloow you to save events to local storage
     function saveEvent() {
