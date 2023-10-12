@@ -3,14 +3,15 @@ $(document).ready(function () {
     let lastLoginDate = moment(lastLoginTime).format("MMMM Do, YYYY [at] h:mm A");
     $("#lastLogin").text("Last Login: " + lastLoginDate);
     //event listener on save buttons
-    //this will aloow you to save events to local storage
+    // this will aloow you to save events to local storage
     function saveEvent() {
-        $('#saveBtn').on('click', function () {
+        $('.saveBtn').on('click', function () {
             let key = $(this).parent().attr('id');
             let value = $(this).siblings('.bulletin-board').val();
             localStorage.setItem(key, value);
         });
     }
+  
     // this function will get any user input that was saved to LS and set the values of the corrosponding text area elems
     function loadEvent() {
         $('.post-container').each(function () {
@@ -20,7 +21,7 @@ $(document).ready(function () {
         });
     }
 // this will erase the text areas when the delete button is clicked
-    $('.post-container').on('click', '#deleteBtn', function () {
+    $('.post-container').on('click', '.deleteBtn', function () {
         let key = $(this).parent().attr('id');
         localStorage.removeItem(key);
         $(this).siblings('.bulletin-board').val('');
