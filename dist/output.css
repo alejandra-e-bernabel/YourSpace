@@ -755,6 +755,11 @@ video {
   background-color: rgb(216 156 131 / var(--tw-bg-opacity));
 }
 
+.bg-medium {
+  --tw-bg-opacity: 1;
+  background-color: rgb(118 115 191 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   background-color: ;
 }
@@ -897,10 +902,6 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:text-white {
-    color: ;
-  }
-
   .dark\:hover\:text-white:hover {
     color: ;
   }
