@@ -16,18 +16,18 @@ This web application interface is a blast from the past as it replicates the nos
 - [Deployed-application-link](#deployed-application-link)
 
 ## Badges
-- ![dotenv](https://img.shields.io/badge/dotenv-blue.svg)
-- ![Express](https://img.shields.io/badge/Express-red.svg)
-- ![MySQL2](https://img.shields.io/badge/MySQL2-blue.svg)
-- ![Sequelize](https://img.shields.io/badge/Sequelize-blue.svg)
-- ![JavaScript](https://img.shields.io/badge/JavaScript-yellow.svg)
-- ![npm](https://img.shields.io/badge/npm-6.14.4-blue.svg)
-- ![node.js](https://img.shields.io/badge/node.js-12.0-green.svg)
-- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-- ![github](https://img.shields.io/badge/github-Profile-lightgrey.svg)
-- ![Heroku](https://img.shields.io/badge/Heroku-App-blueviolet?logo=heroku)
-- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-- ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![dotenv](https://img.shields.io/badge/dotenv-blue.svg)
+![Express](https://img.shields.io/badge/Express-red.svg)
+![MySQL2](https://img.shields.io/badge/MySQL2-blue.svg)
+![Sequelize](https://img.shields.io/badge/Sequelize-blue.svg)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow.svg)
+![npm](https://img.shields.io/badge/npm-6.14.4-blue.svg)
+![node.js](https://img.shields.io/badge/node.js-12.0-green.svg)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![github](https://img.shields.io/badge/github-Profile-lightgrey.svg)
+![Heroku](https://img.shields.io/badge/Heroku-App-blueviolet?logo=heroku)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 
 ## Install
