@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YourSpace</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <header>
         <h1>YourSpace</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/profile">Profile</a></li>
-                {{#if logged_in}}
-                <li><a id="logout" href="/logout">Logout</a></li>
-                {{else}}
-                <li><a href="/login">Login</a></li>
-                {{/if}}
-            </ul>
-        </nav>
     </header>
     <main>
         {{{ body }}}
+
+        {{!-- <!-- Login and Sign Up Buttons -->
+        <div class="buttons-container">
+            <button class="button" onclick="window.location.href='/login'">Login</button>
+            <button class="button" onclick="window.location.href='/signup'">Sign Up</button>
+        </div> --}} 
+
     </main>
     <footer>
         &copy; 2023 YourSpace
     </footer>
     {{#if logged_in}}
-    <script src="/js/login.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
 </body>
+
 </html>
