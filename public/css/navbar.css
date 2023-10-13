@@ -174,39 +174,45 @@ main {
   }
 }
 
-/* .dark {
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
+.avatar{
+border-radius: 50%;
+border: 3px solid rgb(238, 226, 12);
+width: 100px; 
+    
+}
+.container{
+width: 69%;
+border: 3px solid   #26398C;
+padding-bottom: 20px;
+text-align: center;
+background-color: #EAD96C;
+color: #26398C;
+border-radius: 10px;
+}
+.container1{
+display: flex;
+justify-content: space-evenly;
 }
 
-.light {
-  --text-primary: #1f1f1f;
-  --text-secondary: #000000;
-  --bg-primary: #ffffff;
-  --bg-secondary: #e4e4e4;
+
+.name {
+width: 150px;
+font-weight: bold;
+font-size: 1rem;
+overflow-wrap: break-word;
+color: #26398C;
+}
+.edit {
+margin-top: 10px;
+border: 3px solid rgb(238, 226, 12);
+background-color: #26398C;
+color:rgb(245, 245, 159);
+border-radius: 5px;
+padding: 10px;
+font-size: 15px;
 }
 
-.solar {
-  --text-primary: #576e75;
-  --text-secondary: #35535c;
-  --bg-primary: #fdf6e3;
-  --bg-secondary: #f5e5b8;
+.edit:hover{
+background-color: cornflowerblue;
+transition: 200ms ease-in-out;
 }
-
-.theme-icon {
-  display: none;
-} */
-
-/* .dark #darkIcon {
-  display: block;
-}
-
-.light #lightIcon {
-  display: block;
-}
-
-.solar #solarIcon {
-  display: block;
-} */
