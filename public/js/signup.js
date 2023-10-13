@@ -29,11 +29,15 @@
 //   });
   
 
-document.addEventListener('DOMContentLoaded', () => {
-  const signupButton = document.querySelector('#signup-button');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const signupButton = document.querySelector('#signup-button');
 
-  signupButton.addEventListener('click', signupFormHandler)
-});
+//   signupButton.addEventListener('click', signupFormHandler)
+// });
+
+document
+  .querySelector('.signup-form')
+  .addEventListener('submit', signupFormHandler);
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
@@ -43,7 +47,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (name && email && password) {
-    const response = await fetch('/api/signup', {
+    const response = await fetch('/user', {
       method: 'POST',
       body: JSON.stringify({ name, email, password }),
       headers: { 'Content-Type': 'application/json' },

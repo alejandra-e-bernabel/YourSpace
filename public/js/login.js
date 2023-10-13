@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const password = document.querySelector('#password').value;
 
       try {
-          const response = await fetch('/auth/login', {
+          const response = await fetch('/user/login', {
               method: 'POST',
               body: JSON.stringify({ email, password }),
               headers: { 'Content-Type': 'application/json' },

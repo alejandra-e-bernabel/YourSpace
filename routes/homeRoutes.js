@@ -1,5 +1,6 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
+
+
 
 // Handle the Home page route
 router.get('/', (req, res) => {
