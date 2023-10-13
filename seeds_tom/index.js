@@ -1,11 +1,11 @@
 //automates the process of initializing and seeding a database with initial data.
 
 // import dependencies
-const seedFriends = require('./friends-seeds');
 const seedSongs = require('./song-seeds');
 const seedUsers = require('./user-seeds');
 const seedPlaylists = require('./playlist-seeds');
 const seedPlaylist_songs = require('./playlist_song-seeds');
+
 const sequelize = require('../config/connection');  // import sequelize from '../config/connection.js';
 
 
@@ -14,8 +14,6 @@ const seedAll = async () => {
     await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');
 
-    await seedFriends();
-    console.log('\n----- FRIENDS SEEDED -----\n');
     await seedSongs();
     console.log('\n----- SONGS SEEDED -----\n');
 
@@ -36,14 +34,3 @@ const seedAll = async () => {
 };
 
 seedAll();
-// Collapse
-
-
-
-
-
-
-
-
-
-

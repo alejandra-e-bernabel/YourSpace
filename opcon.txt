@@ -1,3 +1,89 @@
+root
+├── assets/
+│   └── ... audio mp3(s)
+│ 
+├── config/
+│   └── connection.js
+│ 
+├── controllers/
+│   ├── playlist-controller.js
+│   ├── song-controller.js
+│   ├── user-controller.js
+│
+├── db/
+│   ├── schema_music.db.js
+│   ├── ...  
+│
+├── models/
+│   ├── index.js
+│   ├── Playlist_song.js
+│   ├── Playlist.js
+│   ├── Song.js
+│   ├── User.js
+│   ├── ...
+│
+├── node-modules/
+│   ├── ....
+│	
+├── public/
+│   ├── js
+│	├── music-app.js
+│     	├── ...        
+│   
+├── routes/
+│   ├── index.js
+│   ├── playlist_song-routes.js
+│   ├── playlist-routes.js
+│   ├── song-routes.js
+│   ├── user-routes.js
+│   ├── ...
+│
+├── seeds/
+│   ├── index.js
+│   ├── playlist_song-seeds.js
+│   ├── playlist-seeds.js
+│   ├── song-seeds.js
+│   ├── user-seeds.js
+│   ├── ...
+│
+├── utils/
+│   ├── passwordUtils.js
+│   ├── ...
+│
+├── views/
+│   ├── index.html
+│   ├── login.html
+│   ├── music.html
+│   ├── registration.html
+│   ├── ...  
+│  
+├── .env
+├── .gitignore  
+├── package.json
+├── package-lock.json│
+├── node_modules/ (auto-generated, don't include in version control)
+├── .gitignore
+├── README.md
+└── ...
+Explanation of the directories:
+client/: Contains the frontend code for your music app, including React components, views, styles, and static assets.
+server/: Contains the backend code for your music app, including controllers, models, routes, and server configuration.
+database/: Contains database-related files, including migrations and seeds for setting up and populating your database using a tool like Knex.js.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Title: Your Space Operational Concept
 
 Introduction
@@ -18,6 +104,7 @@ Blog: Navigates to a new page dedicated to blog posts.
 Friends: Replaces "Favorites" and leads to a page where users can interact with their friends.
 Bulletin Board: This section may be replaced with music-related content or enhanced with interactive features to engage users.
 Settings include a profile edit button.
+Music:  Navigages to yourmusic page.
 
 
 New User Account Creation (Yana)

@@ -3,19 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
 // Define the Playlist model by extending the Model class
-class Playlist extends Model {}
-
-// CREATE TABLE playlist (
-
-//   description TEXT,
-//   song_title VARCHAR(255),
-//   video_id VARCHAR(255),
-//   user_id INT, -- Foreign Key referencing the user who created the playlist
-//   playlist_id INT, -- Foreign Key referencing the playlist that contains the song
-//   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-//   FOREIGN KEY (user_id) REFERENCES users(id), -- Reference to the users table
-//   FOREIGN KEY (playlist_id) REFERENCES playlists(id) -- Reference to the playlists table
-// );
+class Playlist extends Model { }
 
 // Initialize column definitions
 Playlist.init(
@@ -30,11 +18,15 @@ Playlist.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    song_title: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    artist: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    song_title: {
+    video_id: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -46,11 +38,11 @@ Playlist.init(
         key: 'id',      // Referencing the 'id' column in the 'user' table
       },
     },
-    created_date: {
-      type: DataTypes.DATE,
-      allowNull: true,
+      created_date: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
     },
-  },
   // Define Sequelize model configuration options
   {
     sequelize,

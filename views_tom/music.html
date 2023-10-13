@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Search</title>
+    <script src="/public/js/music.js" defer></script>
+    <link rel="stylesheet" href="/public/css/music.css">
+</head>
+
+<body>
+    <h1>Music Search</h1>
+    <!-- Search Interface -->
+    <div id="searchInterface">
+        <input type="text" id="searchQuery" placeholder="Enter a song name">
+        <button onclick="searchYouTube()">Search</button>
+    </div>
+
+    <!-- Display the search results with space -->
+    <div class="search-result" id="searchResults"></div>
+
+    <!-- Music List -->
+    <div id="musicList">
+        <h1>MUSIC LIST</h1>
+        <div id="musicListContainer">
+            <!-- Display the user's music list here -->
+        </div>
+    </div>
+
+</body>
+
+</html>
