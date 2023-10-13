@@ -83,7 +83,6 @@ This Application was Made with the contributions of:
 - Thomas Fusco 
     - Github : https://github.com/smokerdog57
 
-<a href="https://www.freepik.com/free-vector/illustration-diverse-people_2461902.htm#query=avatars&position=8&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik
 
 ## GitHub-repository
 https://github.com/alejandra-e-bernabel/YourSpace
