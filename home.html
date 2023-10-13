@@ -12,15 +12,18 @@
     <link href="/dist/output.css" rel="stylesheet">
     <title>Homepage Bulletin Board</title>
 </head>
-<!-- <header>
-    <div>
-        <img src="/img/Spaceman.PNG" alt="Logo" class="h-12 w-12">
-        <img src="img/your space gradient.PNG" alt="">
+<!-- this is the header featuring original artwork for the logo and typography -->
+<header>
+    <div class="flex flex-col items-center">
+        <img src="/img/Spaceman.PNG" alt="Logo" class="h-80 w-50">
+        <img src="img/your space gradient.PNG" alt="YourSpace" class="w-40">
     </div>
-</header> -->
+</header>
+<!-- the profile card featuring the user profile avatar -->
 
-<body class="bg-cover bg-center bg-fixed md:bg-cover" style='background-image: url("img/dario-bronnimann-hNQwIirOseE-unsplash.jpg")'>
-    <main class="flex justify-center p-6">
+<body class="bg-cover bg-center bg-fixed md:bg-cover"
+    style='background-image: url("img/dario-bronnimann-hNQwIirOseE-unsplash.jpg")'>
+    <main class="flex flex-wrap justify-center p-6">
         <div class="flex flex-col space-y-2 mr-10">
             <div class="w-full max-w-sm bg-white border border-arylide rounded-lg shadow">
                 <div class="flex justify-end px-4 pt-4">
@@ -42,15 +45,6 @@
                                 <a href="#"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
                             </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
-                                    Data</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -58,58 +52,129 @@
                     <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/img/laura-vinck-Hyu76loQLdk-unsplash.jpg"
                         alt="placeholder image" />
                     <h5 class="mb-1 text-2xl font-medium text-marian">Your Name</h5>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">Brief Bio: Lorem ipsum dolor sit amet consectetur
+                    <!-- you can add a brief bio below -->
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Brief Bio: Lorem ipsum dolor sit amet
+                        consectetur
                         adipisicing
                         elit. Aspernatur commodi, natus quia, non autem, consequatur hic velit provident accusantium
                         nostrum
                         cumque. Repellat, nisi vel ea eius architecto corrupti iure amet.</span>
                     <div class="flex mt-4 space-x-3 md:mt-6">
-                        <a href="#"
-                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
-                            friend</a>
-                        <a href="#"
-                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
+                        <div class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-medium">
+                            <p id="lastLogin"></p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- contact card section, this will take you to various links thruout the page  -->
             <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-blue">
-                <div class="bg-buff text-center">
+                <div class="bg-buff p-4 rounded-lg text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Contacting card</h5>
                 </div>
-                <a href="#">
-                    <p>Send message</p>
-                </a>
-                <a href="#">
-                    <p>Friend list</p>
-                </a>
-                <a href="#">
-                    <p>Blog</p>
-                </a>
+                <div class="flex flex-col items-center">
+                    <a href="#">
+                        <button
+                            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                            <span
+                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                Send Message
+                            </span>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button
+                            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                            <span
+                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                Friends List
+                            </span>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button
+                            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                            <span
+                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                Blog
+                            </span>
+                        </button>
+                    </a>
+                </div>
             </div>
-            <div
-                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <div class="bg-buff text-center">
+
+            <!-- music card where you can feature your fav songs -->
+            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
+                <div class="bg-buff rounded-lg p-4 text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Music card</h5>
                 </div>
                 <p>Here is the music I like.</p>
             </div>
         </div>
-        <div class="flex flex-col space-y-4">
-            <div
-                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <div class="bg-buff p-4 text-center">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Bulletin Board Placeholder</h5>
+        <!-- the bulletin board allows the user to post short snippets of comments  -->
+        <div class="flex flex-col space-y-4 flex-shrink">
+            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
+                <div class="bg-buff rounded-lg p-4 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Bulletin Board</h5>
                 </div>
-                <p>entry 1</p>
-                <p class="bg-french text-white">entry 2</p>
-                <p>entry 3</p>
-                <p class="bg-french text-white">entry 4</p>
-                <p>entry 5</p>
+                <div class="container mx-auto mt-8">
+                    <div class="grid grid-cols-3 gap-4"></div>
+                </div>
+                <!-- first text box  -->
+                <div id="board-1" class="post-container">
+                    <textarea name="comment" class="bulletin-board rounded-lg border" cols="37" rows="2"></textarea>
+                    <button
+                        class="saveBtn relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Post
+                        </span>
+                    </button>
+                    <button
+                        class="deleteBtn relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Delete
+                        </span>
+                    </button>
+                </div>
+                <!-- text box 2 within bulletin board  -->
+                <div id="board-2" class="post-container">
+                    <textarea name="comment" class="bulletin-board rounded-lg border" cols="37" rows="2"></textarea>
+                    <button
+                        class=" saveBtn relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Post
+                        </span>
+                    </button>
+                    <button
+                        class="deleteBtn relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Delete
+                        </span>
+                    </button>
+                </div>
+                <div id="board-3" class="post-container">
+                    <textarea name="comment" class="bulletin-board rounded-lg border" cols="37" rows="2"></textarea>
+                    <button
+                        class="saveBtn relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Post
+                        </span>
+                    </button>
+                    <button class="deleteBtn relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                           Delete
+                        </span>
+                      </button>
+                </div>
             </div>
-
-            <div
-                class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <div class="bg-buff p-4 text-center">
+            <!-- you can add and delete your top friends for other users to see  -->
+            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
+                <div class="bg-buff rounded-lg p-4 text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Top Friends</h5>
                 </div>
                 <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -133,6 +198,10 @@
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/JavaScript" src=" https://momentJS.com/downloads/moment.js"></script>
+<script src="bulletin.js"></script>
 
 </html>
