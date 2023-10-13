@@ -29,11 +29,40 @@ edit.addEventListener("click", function () {
   newImage5.src = "/images/friend-John.jpg";
   newImage5.alt = "A image of gray and white seamless pattern";
 
-  // Append new images to the friend container
-  friendContainer.appendChild(newImage1);
-  friendContainer.appendChild(newImage2);
-  friendContainer.appendChild(newImage3);
-  friendContainer.appendChild(newImage4);
-  friendContainer.appendChild(newImage5);
 
+     // Create new paragraph elements
+    const newParagraph1 = document.createElement("p");
+    newParagraph1.textContent = "Alexandra Rodriguez";
+    newParagraph1.className = "pName";
+
+    const newParagraph2 = document.createElement("p");
+    newParagraph2.textContent = "Catherine Smith";
+    newParagraph2.className = "pName";
+
+    const newParagraph3 = document.createElement("p");
+    newParagraph3.textContent = "Suzy Johnston";
+    newParagraph3.className = "pName";
+
+    const newParagraph4 = document.createElement("p");
+    newParagraph4.textContent = "Felipe Santiago";
+    newParagraph4.className = "pName";
+
+    const newParagraph5 = document.createElement("p");
+    newParagraph5.textContent = "John Cena";
+    newParagraph5.className = "pName";
+    // Append new images and paragraphs to the friend container
+    friendContainer.appendChild(newImage1);
+    friendContainer.appendChild(newParagraph1);
+    friendContainer.appendChild(newImage2);
+    friendContainer.appendChild(newParagraph2);
+    friendContainer.appendChild(newImage3);
+    friendContainer.appendChild(newParagraph3);
+    friendContainer.appendChild(newImage4);
+    friendContainer.appendChild(newParagraph4);
+    friendContainer.appendChild(newImage5);
+    friendContainer.appendChild(newParagraph5);
 });
+
+
+
+
