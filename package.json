@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "build-css": "tailwindcss build css/navbar.css -o public/styles.css",
-    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch"
-    "build": "tailwindcss -i ./src/style.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch",
+    "build": "tailwindcss -i ./src/style.css -o ./dist/output.css"
   },
   "repository": {
     "type": "git",
