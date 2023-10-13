@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourSpace: Blog</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <!-- bootstrap and dependencies-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- blog.html -->
+        <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/d69e454e9c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="blogHeader"><img src="./assets/your space gradient.PNG"  style="height: 65px; width: auto;"><img src="./assets/Spaceman.PNG"  style="height: 150px; width: auto;"><img src="./assets/Blog.png" style="height: 100px; width: auto;"></h1>
+
+    <div class="dropdown">
+        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Edit Post</a>
+        </div>
+    </div>
+
+    <div class="blogEl">
+        <div class="newPost">
+            <input class="newPostTitle form-control form-control-lg" placeholder="Enter new post title"></input>
+            <br>
+            <textarea class="newPostText form-control" placeholder="What's on your mind?"></textarea>
+        </div>
+        <br>
+        <div class="blogButtonContainer">
+            <button type="button" id="newEntryButton" class="newEntryButton btn btn-light">Post new entry</button>
+        </div>
+        <!-- new entries will be added here through javascript -->
+        <div class="entries"></div>
+
+        <br><br>
+
+        <div class=previousPosts>
+            <h2 class=previousPostHeader>Previous Posts</h2>
+            <div>
+                <div class="list-container">
+                    <div class="card">
+                        <ul class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="popupContainer" class="popupContainer">
+        <div class="popup">
+            <div class="centerContent">
+                <p>Are you sure you'd like to <b>permanently</b> delete this post? <br>This change cannot be undone.</p>
+            </div>
+            <div class="popupButtons">
+                <button class="popupButton popupButtonDelete" onclick="handleDelete()">Yes, permanently delete this
+                    post</button>
+                <button class="popupButton popupButtonBack" onclick="closePopup()">No, take me back!</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/assets/js/blog.js"></script>
+    
+</body>
+
+</html>
