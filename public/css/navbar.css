@@ -216,3 +216,9 @@ font-size: 15px;
 background-color: cornflowerblue;
 transition: 200ms ease-in-out;
 }
+
+.avatar2{
+border-radius: 50%;
+border: 3px solid rgb(238, 226, 12);
+width: 100px; 
+}
