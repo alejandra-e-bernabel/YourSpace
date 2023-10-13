@@ -79,7 +79,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-=======
+
 router.get("/friend/:id", (req, res) => {
   Friend.findByPk(req.params.id)
     .then((friend) => {
