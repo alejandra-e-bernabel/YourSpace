@@ -93,7 +93,7 @@ main {
   font-weight: bolder;
   margin-bottom: 1rem;
   text-align: center;
-  background-image: url("/images/space.jpg");/* #26398C; */
+  background-image: url("/images/space.jpg");
   font-size: 1.7rem;
   letter-spacing: 0.3ch;
   width: 100%;
@@ -191,7 +191,6 @@ border-radius: 10px;
 }
 .container1{
 display: flex;
-justify-content: space-evenly;
 }
 
 
@@ -199,7 +198,7 @@ justify-content: space-evenly;
 width: 150px;
 font-weight: bold;
 font-size: 1rem;
-overflow-wrap: break-word;
+overflow-wrap: break-word; 
 color: #26398C;
 }
 .edit {
@@ -215,4 +214,25 @@ font-size: 15px;
 .edit:hover{
 background-color: cornflowerblue;
 transition: 200ms ease-in-out;
+}
+
+
+.container2{
+display: flex; 
+flex-direction: row;
+width: 150px;
+overflow-wrap: break-word;
+} 
+
+.hover-effect:hover{
+ transform: scale(1.1);
+}
+
+.draggable {
+  cursor: pointer;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+  user-select: none;
 }

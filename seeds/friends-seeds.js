@@ -22,7 +22,7 @@ const friendData = [
     image_path: "/images/friend-Tom.jpg",
   },
   {
-    friend_name: "John Wayne",
+    friend_name: "John Cena",
     image_path: "/images/friend-John.jpg",
   },
   {
