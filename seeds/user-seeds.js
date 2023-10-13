@@ -1,8 +1,8 @@
 // Populates the model's table with initial data
-const { User } = require('../models'); // Import the user model from '../models'
+const { User } = require('../models'); // Import the model from '../models'
 
 // Seed the user data
-const User = [
+const userData = [
   {
     user_name: 'Ale',
     email: 'ira@roamradar.atlassian.net',
@@ -30,11 +30,11 @@ const User = [
   {
     user_name: 'Tom',
     email: 'smokerdog57@gmail.com',
-    password_hash: 'xxx',
-    registration_date: '2023-10-05',    
+    password_hash: 'Big1blue!',
+    registration_date: '2023-10-05', 
   },
 ];
 
-const seedUsers = () => User.bulkCreate(userData); // Corrected the model name to 'user'
+const seedUsers = () => User.bulkCreate(userData); 
 
 module.exports = seedUsers;

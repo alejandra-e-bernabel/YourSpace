@@ -33,7 +33,7 @@ Playlist_Song.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'playlist_song', // Correct the modelName to 'playlist_song'
+    modelName: 'playlist_song', 
   }
 );
 

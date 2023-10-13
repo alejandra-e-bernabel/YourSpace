@@ -1,15 +1,15 @@
 // Populates the model's table with initial data
-const { Playlist } = require('../models'); // Import the user model from '../models'
+const { Playlist } = require('../models'); // Import the model from '../models'
 
 // Seed the user data
-const Playlist = [
+const playlistData = [
   {
     playlist_title: 'eclectic',
-    user_id: 'Tom',
+    user_id: 5,
     created_date: '2023-10-05',
   },
  ];
 
-const seedPlaylists = () => User.bulkCreate(playlistData); // Corrected the model name to 'user'
+const seedPlaylists = () => Playlist.bulkCreate(playlistData); 
 
 module.exports = seedPlaylists;

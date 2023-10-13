@@ -1,4 +1,4 @@
-// defines Sequelize model for the "song" table and imports Sequalize classes: Model and and Datatypes.
+// defines Sequelize model for the table and imports Sequalize classes: Model and and Datatypes.
 // imports Sequalize class instance from connection.js for database connection to enable this module to 
 // define the model and associate it with the database connection.
 

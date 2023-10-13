@@ -22,6 +22,10 @@ Song.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    song_path: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     duration: {
       type: DataTypes.INTEGER,
       allowNull: true,
