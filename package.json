@@ -1,25 +1,13 @@
+
 {
   "name": "yourspace",
   "version": "1.0.0",
-
-  "description": "A modernized version of the nostalgic myspace",
-  "main": "server.js",
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "mysql2": "^3.6.1",
-    "sequelize": "^6.33.0",
-    "tailwindcss": "^3.3.3"
-  },
+  "description": "A modernized and simplistic version of a old favorite: MySpace ",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "seed": "node ./seeds/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "tailwindcss build css/navbar.css -o public/styles.css",
-    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch",
-    "build": "tailwindcss -i ./src/style.css -o ./dist/output.css"
+    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch"
+    "build": "tailwindcss -i ./src/style.css -o ./dist/output.css",
   },
   "repository": {
     "type": "git",
@@ -37,12 +25,14 @@
     "html",
     "css"
   ],
-  "author": "Nicole Torres",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alejandra-e-bernabel/YourSpace/issues"
+ 
+  "dependencies": {
+
+    "tailwindcss": "^3.3.3",
+    "tw-elements": "^1.0.0"
+
   },
-  "homepage": "https://github.com/alejandra-e-bernabel/YourSpace#readme",
+
   "devDependencies": {
     "nodemon": "^2.0.3",
     "tailwindcss": "^3.3.3"
