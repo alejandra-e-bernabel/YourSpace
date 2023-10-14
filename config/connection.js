@@ -1,8 +1,13 @@
+
+​
 // Import Sequelize library for database connection
 const Sequelize = require('sequelize');
 
 // Import necessary modules and load environment variables from .env file
 require('dotenv').config();
+
+
+const URI = process.env.MYSQL  // *fix this
 
 // Create a Sequelize instance to connect to the MySQL database
 // Check if a JAWSDB_URL is available (for hosting platforms like Heroku)

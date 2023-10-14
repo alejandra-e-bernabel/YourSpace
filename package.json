@@ -1,0 +1,51 @@
+{
+  "name": "yourspace",
+  "version": "1.0.0",
+  "description": "A modernized and simplistic version of a old favorite: MySpace ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node ./seeds/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build css/navbar.css -o public/styles.css",
+    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smokerdog57/ormEcommerceBackEnd.git"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "express",
+    "sequelize",
+    "tailwind",
+    "css",
+    "html",
+    "heroku"
+   ],
+  "author": "Project team Your Space",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandra-e-bernabel/YourSpace/issues"
+  },
+  "homepage": "https://github.com/alejandra-e-bernabel/YourSpace#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.1",
+    "sequelize": "^6.33.0",
+    "tailwindcss": "^3.3.3",
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.16",
+    "bootstrap": "^5.3.2",
+    "postcss": "^8.4.31",
+    "uuid": "^9.0.1"
+ }
+}
