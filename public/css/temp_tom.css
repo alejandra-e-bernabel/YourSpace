@@ -1,0 +1,28 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Add your preferred background color here */
+    /* Additional styles for the navbar */
+}
+
+.login-button {
+    display: inline-block;
+    padding: 12px 24px; /* Adjust padding as needed */
+    background-color: #007BFF; /* Change the background color to your preference */
+    color: #fff; /* Text color */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+
+    /* Add additional styles for hover and focus states if desired */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* A slightly darker shade on hover */
+}
+
+.login-button:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.7); /* Optional: Add a box shadow on focus */
+}

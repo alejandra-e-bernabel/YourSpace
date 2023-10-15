@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* **********************************YANA STYLE.CSS */
-
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #F4F4F4;
     margin: 0;
@@ -97,6 +95,5 @@ body {
   ​
   button:hover {
     background-color: #7673BF; /* Slate Blue */
-  }
+  } */
 
-/* **********************************END OF YANA STYLE.CSS */

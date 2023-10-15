@@ -4,9 +4,16 @@ const { Playlist } = require('../models'); // Import the model from '../models'
 // Seed the user data
 const playlistData = [
   {
-    playlist_title: 'eclectic',
+    song_title: 'Country Roads',
+    artist: 'John Denver',
+    audio_path: '/audio/countryroads.mp3',
     user_id: 5,
-    created_date: '2023-10-05',
+  },
+  {
+    song_title: 'Bohemian Rhapsody',
+    artist: 'Queen',
+    audio_path: '/audio/bohemianrhapsody.mp3',
+    user_id: 5,
   },
  ];
 

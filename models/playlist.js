@@ -14,19 +14,15 @@ Playlist.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    playlist_title: {
+    song_title: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    song_title: {
-      type: DataTypes.TEXT,
-      allowNull: true,
     },
     artist: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
-    video_id: {
+    audio_path: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -38,11 +34,7 @@ Playlist.init(
         key: 'id',      // Referencing the 'id' column in the 'user' table
       },
     },
-      created_date: {
-        type: DataTypes.DATE,
-        allowNull: true,
-      },
-    },
+  },
   // Define Sequelize model configuration options
   {
     sequelize,

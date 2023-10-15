@@ -4,31 +4,31 @@ const { User } = require('../models'); // Import the model from '../models'
 // Seed the user data
 const userData = [
   {
-    user_name: 'Ale',
-    email: 'ira@roamradar.atlassian.net',
-    password_hash: 'xxx',
+    name: 'Ale',
+    email: 'ale@gmail.com',  // fictitious, needs update
+    password_hash: 'xxxxxxxx',
     registration_date: '2023-10-05',
   },
   {
-    user_name: 'Mads',
+    name: 'Mads',
     email: 'abraham.madeleine229@gmail.com',
-    password_hash: 'xxx',
+    password_hash: 'xxxxxxxx',
     registration_date: '2023-10-05',
   },
   {
-    user_name: 'Nicky',
-    email: 'ira@roamradar.atlassian.net',
-    password_hash: 'xxx',
+    name: 'Nicky',
+    email: 'nicky@gmail.com', // fictitious, needs update
+    password_hash: 'xxxxxxxx',
     registration_date: '2023-10-05',
   },
   {
-    user_name: 'Yana',
+    name: 'Yana',
     email: 'yana.mishina.92@gmail.com',
-    password_hash: 'xxx',
+    password_hash: 'xxxxxxxx',
     registration_date: '2023-10-05',    
   },
   {
-    user_name: 'Tom',
+    name: 'Tom',
     email: 'smokerdog57@gmail.com',
     password_hash: 'Big1blue!',
     registration_date: '2023-10-05', 
