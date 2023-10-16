@@ -1,19 +1,22 @@
-*{
-    box-sizing:border-box;
-    padding: 0;
-    margin: 0;
-    /* font-family: 'Young Serif', serif; */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* font-family: 'Young Serif', serif; */
 }
 
 /* main page styling */
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
 body {
-    background-color: #AEB3CC;
-    background-image: url("../images/dario-bronnimann-hNQwIirOseE-unsplash.jpg");
+  background-image: url(../images/jeremy-thomas-E0AHdsENmDg-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .blogBody {
@@ -37,7 +40,7 @@ body {
   .blogBody {
     margin-left: 0px;
   }
-  
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -52,113 +55,129 @@ body {
   }
 }
 
-.col-md-3, .col-md-9 {
+.col-md-3,
+.col-md-9 {
   padding: 0px;
 }
 
 .blogHeader {
-    background-color: #263A8C;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 20px;
+  /* background-color: #263A8C; */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .previousPostHeader {
-    background-color: #263A8C;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 20px
+  background-color: #263A8C;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px
 }
 
 .blogEl {
-    background-color:  #7773BF;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px;
-    min-height: 500px;
-    border-radius: 10px;
-    padding: 10px;
+  background-color: #7773BF;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  min-height: 500px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .blogButtonContainer {
-    display: flex;
-    justify-content: right;
+  display: flex;
+  justify-content: right;
+}
+
+#newEntryButton {
+  background: -webkit-linear-gradient(right, #EAD96C, #D89C83);
+  border: none;
+  border-radius: 21px;
+  cursor: pointer;
+  color: #26398C;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 10px;
+  transition: 0.25s;
+  width: 153px;
 }
 
 /* delete popup styling */
 .popupContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 
-  .popup {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-  }
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
 
-  .popupButtons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 10px;
-  }
+.popupButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
 
-  .popupButton {
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.popupButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .popupButtonDelete {
-    background-color: #A45556;
-    color: white;
-  }
+.popupButtonDelete {
+  background-color: #A45556;
+  color: white;
+}
 
-  .popupButtonBack {
-    background-color: #CEEAF7;
-  }
+.popupButtonBack {
+  background-color: #CEEAF7;
+}
 
-  .centerContent {
-    text-align: center;
-  }
+.centerContent {
+  text-align: center;
+}
 
-  .pushRight {
-    text-align: right;
-  }
+.pushRight {
+  text-align: right;
+}
 
-  .datePosted{
-    color:grey;
-  }
+.datePosted {
+  color: grey;
+}
 
-  .likesDislikesDate {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.likesDislikesDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
-  .likesAndDislikes {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
+.likesAndDislikes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
-  .likes, .dislikes {
-    background-color: #263A8C;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-    min-width: 100px;    
-    text-align: center;
-  }
+.likes,
+.dislikes {
+  background-color: #263A8C;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 100px;
+  text-align: center;
+}
