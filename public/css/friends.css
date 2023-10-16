@@ -5,14 +5,15 @@ width: 100px;
     
 }
 .container{
-width: 69%;
+width: 100px;
 border: 3px solid   #26398C;
-padding-bottom: 20px;
+padding-bottom: 10px;
 text-align: center;
-background-color: #EAD96C;
+background-color: #ffffff;
 color: #26398C;
 border-radius: 10px;
 }
+
 .container1{
 display: flex;
 justify-content: space-evenly;
