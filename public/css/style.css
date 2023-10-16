@@ -49,51 +49,51 @@
   ​
   footer {
     background-color: #AEB3CC; /* French Gray */
-    color: #FFFFFF;
+    /* color: #FFFFFF;
     text-align: center;
     padding: 10px;
-  }
+  } */
   ​
   /* Specific Styles for Login and Signup Pages */
-  .login-container, .signup-container {
+  /* .login-container, .signup-container {
     width: 50%;
     margin: 0 auto;
     padding: 20px;
     background-color: #7673BF; /* Slate Blue */
-    border-radius: 5px;
+    /* border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
+  } */ 
   ​
-  form {
+  /* form {
     margin-top: 20px;
-  }
+  } */
   ​
-  label {
+  /* label {
     display: block;
     margin-bottom: 5px;
     color: #D89C83; /* Buff */
-  }
+  /* } */
   ​
-  input[type="text"],
+  /* input[type="text"],
   input[type="email"],
   input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #EAD96C; /* Arylide Yellow */
-    border-radius: 3px;
-  }
+    margin-bottom: 10px; */
+    /* border: 1px solid #EAD96C; Arylide Yellow */
+    /* border-radius: 3px;
+  } */
   ​
-  button {
-    background-color: #26398C; /* Marian Blue */
+  /* button {
+    background-color: #26398C; Marian Blue
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
-  }
+  } */
   ​
-  button:hover {
-    background-color: #7673BF; /* Slate Blue */
-  } */ */
+  /* button:hover {
+    background-color: #7673BF; Slate Blue
+  } */ 
 
