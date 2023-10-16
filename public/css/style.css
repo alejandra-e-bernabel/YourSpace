@@ -53,7 +53,7 @@
     text-align: center;
     padding: 10px;
   } */
-  ​
+  
   /* Specific Styles for Login and Signup Pages */
   /* .login-container, .signup-container {
     width: 50%;
@@ -63,17 +63,17 @@
     /* border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   } */ 
-  ​
+  
   /* form {
     margin-top: 20px;
   } */
-  ​
+  
   /* label {
     display: block;
     margin-bottom: 5px;
     color: #D89C83; /* Buff */
   /* } */
-  ​
+  
   /* input[type="text"],
   input[type="email"],
   input[type="password"] {
@@ -83,7 +83,7 @@
     /* border: 1px solid #EAD96C; Arylide Yellow */
     /* border-radius: 3px;
   } */
-  ​
+  
   /* button {
     background-color: #26398C; Marian Blue
     color: #FFFFFF;
@@ -92,8 +92,7 @@
     cursor: pointer;
     font-weight: bold;
   } */
-  ​
+  
   /* button:hover {
     background-color: #7673BF; Slate Blue
   } */ 
-
