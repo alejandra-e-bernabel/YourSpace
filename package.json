@@ -1,29 +1,21 @@
 {
   "name": "yourspace",
   "version": "1.0.0",
-  "description": "A modernized and simplistic version of a old favorite: MySpace ",
+  "description": "A modernized and simplistic version of an old favorite: MySpace",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "seed": "node ./seeds/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "tailwindcss build css/navbar.css -o public/styles.css",
-    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch"
+    "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch",
+    "password-hashing": "node passwordHashing.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smokerdog57/ormEcommerceBackEnd.git"
   },
-  "keywords": [
-    "js",
-    "node",
-    "express",
-    "sequelize",
-    "tailwind",
-    "css",
-    "html",
-    "heroku"
-   ],
+  "keywords": ["js", "node", "express", "sequelize", "tailwind", "css", "html", "heroku"],
   "author": "Project team Your Space",
   "license": "ISC",
   "bugs": {
@@ -47,5 +39,5 @@
     "bootstrap": "^5.3.2",
     "postcss": "^8.4.31",
     "uuid": "^9.0.1"
- }
+  }
 }

@@ -12,21 +12,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <link href="../public/css/output.css" rel="stylesheet">
-
-    <title>Homepage Bulletin Board</title>
+    <title>Homepage</title>
 </head>
-
-<!-- this is the header featuring original artwork for the logo and typography -->
-<header>
-    <div class="flex flex-col items-center">
-        <img src="../public/images/Spaceman.PNG" alt="Logo" class="h-80 w-50">
-        <img src="../public/images/yourSpaceGradient.PNG" alt="YourSpace" class="w-40">
-    </div>
-</header>
-<!-- the profile card featuring the user profile avatar -->
 
 <body class="bg-cover bg-center bg-fixed md:bg-cover"
     style='background-image: url("../public/images/dario-bronnimann-hNQwIirOseE-unsplash.jpg")'>
+    <!-- this is the header featuring original artwork for the logo and typography -->
+    <header>
+        <div class="flex flex-col items-center">
+            <img src="../public/images/Spaceman.PNG" alt="Logo" class="h-80 w-50">
+            <img src="../public/images/yourSpaceGradient.PNG" alt="YourSpace" class="w-40">
+        </div>
+    </header>
+
+    <!-- the profile card featuring the user profile avatar -->
     <main class="flex flex-wrap justify-center p-6">
         <div class="flex flex-col space-y-2 mr-10">
             <div class="w-full max-w-sm bg-white border border-arylide rounded-lg shadow">
@@ -112,7 +111,13 @@
                 <div class="bg-buff rounded-lg p-4 text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Music card</h5>
                 </div>
-                <p>Here is the music I like.</p>
+                <button id="getPlaylistButton" onclick="getPlaylist()"
+                    class="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+                    Get Your Playlist.
+                </button>
+                <div id="musicListContainer">
+                    <!-- Display the user's music list here -->
+                </div>
             </div>
         </div>
         <!-- the bulletin board allows the user to post short snippets of comments  -->
@@ -178,28 +183,35 @@
                     </button>
                 </div>
             </div>
-            <!-- you can add and delete your top friends for other users to see  -->
+            <!-- you can add and delete your top friends for other users to see -->
             <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
                 <div class="bg-buff rounded-lg p-4 text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Top Friends</h5>
                 </div>
-                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                        src="../public/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
+                <!-- freind 1 for testing -->
+                <!-- Add the click event handler to each friend element -->
+                <a href="#" onclick="getFriends(1)"> <!-- Replace 1 with the friend's ID -->
+                    <img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
                     <p>Friend 1</p>
                 </a>
-                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                        src="../public/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
+                <a href="#">
+                    <img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
                     <p>Friend 2</p>
                 </a>
-                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                        src="../public/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
+                <a href="#">
+                    <img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
                     <p>Friend 3</p>
                 </a>
-                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                        src="../public/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
+                <a href="#">
+                    <img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
                     <p>Friend 4</p>
                 </a>
             </div>
+
         </div>
 
     </main>
@@ -210,5 +222,6 @@
 <script type="text/JavaScript" src=" https://momentJS.com/downloads/moment.js"></script>
 <script src="../public/js/bulletin.js"></script>
 <script src="../public/js/friends.js"></script>
+<script src="../public/js/music.js" defer></script>
 
 </html>

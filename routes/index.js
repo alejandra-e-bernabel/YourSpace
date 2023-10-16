@@ -5,10 +5,6 @@ const playlistRoutes = require('./playlist-routes');
 const userRoutes = require('./userRoutes');
 // const homeRoutes = require('./homeRoutes');
 router.use('/', homeRoutes); // Home route
-router.use('/user', userRoutes); // User-related routes
-
-// Mount the userRoutes
-router.use('/users', userRoutes);
 
 // Mount the playlistRoutes
 router.use('/playlists', playlistRoutes);
@@ -20,6 +16,3 @@ router.use((err, req, res, next) => {
 });
 
 module.exports = router;
-
-
-      

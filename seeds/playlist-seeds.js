@@ -10,9 +10,9 @@ const playlistData = [
     user_id: 5,
   },
   {
-    song_title: 'Bohemian Rhapsody',
-    artist: 'Queen',
-    audio_path: '/audio/bohemianrhapsody.mp3',
+    song_title: 'Duele El Corazon',
+    artist: 'Enrique Iglesias',
+    audio_path: '/audio/DUELE_EL_CORAZON.mp3',
     user_id: 5,
   },
  ];

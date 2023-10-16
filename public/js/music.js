@@ -1,61 +1,73 @@
-// music.js
-// Client-side search logic
-function searchYouTube() {
-    const searchQuery = document.getElementById('searchQuery').value;
+// Initialize your playlist data when the page loads
+let playlist = [];
 
-    // Make a GET request to the server's /search route with the search query
-    fetch(`/search?query=${encodeURIComponent(searchQuery)}`)
-        .then(response => {
+// Function to load playlist data
+function getPlaylist() {
+    return fetch('/get-playlist')
+        .then((response) => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             return response.json();
         })
-        .then(data => {
-            displaySearchResults(data);
+        .then((data) => {
+            playlist = data;
         })
-        .catch(error => {
-            console.error('Error fetching search results:', error);
+        .catch((error) => {
+            console.error('Error fetching playlist:', error);
         });
 }
 
-function displaySearchResults(searchResults) {
-    const searchResultsContainer = document.getElementById('searchResults');
-    searchResultsContainer.innerHTML = ''; // Clear previous results
+// Function to play a song
+function playSong(audioPath) {
+    const audioPlayer = new Audio(audioPath);
+    audioPlayer.play();
+}
 
-    searchResults.items.forEach(result => {
-        const videoId = result.id.videoId;
-        const title = result.snippet.title;
-        const thumbnail = result.snippet.thumbnails.default.url;
+// Function to display the playlist when the user clicks the "Retrieve Playlist" button
+function displayPlaylist() {
+    console.log('Received playlist data:', playlist); // Add this line
+    const musicListContainer = document.getElementById('musicListContainer');
+    musicListContainer.innerHTML = '';
 
-        const searchResultContainer = document.createElement('div');
-        searchResultContainer.className = 'search-result';
+    // Iterate through the playlist data and display it on the page
+    playlist.forEach((item) => {
+        const songElement = document.createElement('div');
+        const audioPlayer = document.createElement('audio');
 
-        searchResultContainer.innerHTML = `
-            <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">
-                <img src="${thumbnail}" alt="${title}">
-            </a>
-            <h2>${title}</h2>
-            <button onclick="addSongToList('${title}', '${videoId}')" class="add-to-list-button">Add to List</button>
-        `;
+        // Create and configure the source element for the audio player
+        const source = document.createElement('source');
+        source.src = item.audio_path; // Use the audio_path directly
+        source.type = 'audio/mpeg';
 
-        searchResultsContainer.appendChild(searchResultContainer);
+        audioPlayer.controls = true;
+
+        // Create elements to display song title and artist
+        const songTitle = document.createElement('p');
+        songTitle.innerText = `Title: ${item.song_title}`;
+        const artist = document.createElement('p');
+        artist.innerText = `Artist: ${item.artist}`;
+
+        // Add the source element to the audio player
+        audioPlayer.appendChild(source);
+
+        // Add a click event listener to play the song when clicked
+        songElement.addEventListener('click', () => playSong(item.audio_path));
+
+        // Append all elements to the songElement
+        songElement.appendChild(songTitle);
+        songElement.appendChild(artist);
+        songElement.appendChild(audioPlayer);
+
+        musicListContainer.appendChild(songElement);
     });
 }
 
 
-function addSongToList(title, videoId) {
-    // Update the music list section in the view
-    const musicListContainer = document.getElementById('musicListContainer');
-    const songElement = document.createElement('div');
-    songElement.innerHTML = `
-      <div class="music-list-item">
-        <h3>${title}</h3>
-        <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">Watch on YouTube</a>
-      </div>
-    `;
-
-    musicListContainer.appendChild(songElement);
-}
-
-// Other client-side code for searching and displaying results
+// Event listener for the "Retrieve Playlist" button
+const retrievePlaylistButton = document.getElementById('getPlaylistButton');
+retrievePlaylistButton.addEventListener('click', () => {
+    getPlaylist().then(() => {
+        displayPlaylist();
+    });
+});

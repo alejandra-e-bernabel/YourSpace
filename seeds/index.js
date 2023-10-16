@@ -3,6 +3,7 @@
 // import dependencie
 const seedUsers = require('./user-seeds');
 const seedPlaylists = require('./playlist-seeds');
+const seedFriends = require('./friend-seeds');
 const sequelize = require('../config/connection');  // import sequelize from '../config/connection.js';
 
 
@@ -16,6 +17,9 @@ const seedAll = async () => {
 
     await seedPlaylists();
     console.log('\n----- PLAYLISTS SEEDED -----\n');
+
+    await seedFriends();
+    console.log('\n----- FRIENDS SEEDED -----\n');
 
     process.exit(0);
   } catch (error) {

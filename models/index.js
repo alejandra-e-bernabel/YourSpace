@@ -3,9 +3,11 @@
 
 const Playlist = require('./Playlist');
 const User = require('./User');
+const Friend = require('./Friend');
 
 // export models
 module.exports = {
     User,
     Playlist,
+    Friend,
   };

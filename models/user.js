@@ -2,9 +2,17 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+// class User extends Model {
+//   checkPassword(loginPw) {
+//     return bcrypt.compareSync(loginPw, this.password);
+//   }
+// }
+
 class User extends Model {
   checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
+    // Comment out the bcrypt functionality for testing
+    // return bcrypt.compareSync(loginPw, this.password);
+    return loginPw === this.password_hash; // Compare clear text password
   }
 }
 
@@ -40,11 +48,6 @@ User.init(
       allowNull: false,
     }
 
-
-
-
-
-
   },
   {
     sequelize, // This should be sequelize, not a separate object
@@ -52,6 +55,14 @@ User.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'user', // Set the model name to 'user'
+    hooks: {
+      beforeCreate: async (user) => {
+        if (user.changed('password_hash')) {
+          const saltRounds = 10; // Specify the number of salt rounds
+          user.password_hash = await bcrypt.hash(user.password_hash, saltRounds);
+        }
+      },
+    },
   }
 );
 
