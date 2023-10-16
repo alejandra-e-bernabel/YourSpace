@@ -6,6 +6,17 @@ const sequelize = require('./config/connection'); // Import the Sequelize connec
 const { User, Playlist } = require('./models'); // Import your models
 const authController = require('./controllers/authController'); // Import your auth controller
 
+// ************************************** Alejandra dependencies
+
+const fs = require('fs');
+const getTimeAndDate = require ("./public/js/timeandDate");
+const getLikesandDislikes = require("./public/js/likesAndDislikes");
+//unique ID generator
+const { v4: uuidv4 } = require('uuid');
+// call using uuidv4();
+// ************************************** End of Alejandra dependencies
+
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -80,6 +91,102 @@ app.get('/get-playlist', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
+// ****************************************ALEJANDRA GET, POST, DELETE PATHS
+
+// localhost:4000/blog will take us to /views/blog.html
+app.get("/blog", (req, res) =>
+    res.sendFile(path.join(__dirname, "/views/blog.html"))
+);
+
+// localhost:4000/api/blog will display saved blog posts JSON
+app.get("/api/blog", (req, res) => {
+  fs.readFile("./db/blog.json", "utf-8", (err, data) => {
+      if (err) throw err;
+      const blogData = JSON.parse(data);
+      res.json(blogData);
+    });
+});
+
+//says what happens when user provides a delete request.
+app.delete("/api/blog/:id", (req, res) => {
+  //read current notes
+  fs.readFile("./db/blog.json", "utf-8", (err, data) => {
+      if (err) throw err;
+      //save request parameter as deleteID
+      const deleteID = req.params.id;
+      //parse currentPosts string ---> JSON objest
+      let currentPosts = JSON.parse(data);
+
+      //iterate through currentPosts. Any with the same ID as requested will be spliced from the JSON file.
+      for (let i=0; i<currentPosts.length; i++) {
+          if (deleteID === currentPosts[i].id) {
+              currentPosts.splice(i, 1);
+          }
+      };
+
+      //stringify current notes JSON ---> string
+      currentPosts = JSON.stringify(currentPosts);
+
+      //provide request response to user
+      res.send("Note has been deleted");
+
+      //update current notes to blog.json file
+      fs.writeFile(`./db/blog.json`, currentPosts, (err) =>
+          err
+              ? console.error(err)
+              : console.log(
+                  "Object deleted!"
+              )
+      );
+  })
+})
+
+//says what happens when user provides a POST request
+app.post("/api/blog", (req, res) => {
+  let response;
+  //making sure post has title and text
+  if (req.body.title && req.body.text) {
+      response = {
+          title: req.body.title,
+          text: req.body.text,
+          id: uuidv4(),  //give item ID, this will help with displaying and deleting saved notes.
+          datePosted : getTimeAndDate(),
+          likes : getLikesandDislikes.randomLikes(),
+          dislikes : getLikesandDislikes.randomDislikes()
+      };
+
+      res.json("Blog post with title " + response.title + " has been added")
+
+      //check current blog.json
+      fs.readFile("./db/blog.json", "utf-8", (err, data) => {
+          if (err) throw err;
+
+          //parse current notes JSON, string ---> JSON object
+          const originalNotes = JSON.parse(data);
+          //add new note to originalNotes JSON object
+          originalNotes.push(response);
+          //stringify noteString to pass it back to blog.json, JSON ---> string
+          const noteString = JSON.stringify(originalNotes);
+
+          //write new noteString to blog.json
+          fs.writeFile(`./db/blog.json`, noteString, (err) =>
+              err
+                  ? console.error(err)
+                  : console.log(
+                      "Blog post with title " + response.title + " has been added"
+                  )
+          );
+      })
+  }
+  //in case user enters a get request that does not contain title and text
+  else {
+      res.json("Request body must contain a title and text");
+  }
+});
+
+// ****************************************END OF ALEJANDRA GET, POST, DELETE PATHS
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {
