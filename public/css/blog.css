@@ -6,10 +6,22 @@
 }
 
 /* main page styling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 body {
     /* background-color: #AEB3CC; */
-    background-image: url("../images/dario-bronnimann-hNQwIirOseE-unsplash.jpg");
+    /* background-image: url("../images/dario-bronnimann-hNQwIirOseE-unsplash.jpg"); */
+}
+
+/* .navbar {
+    position:static;
+} */
+
+.col-md-3, .col-md-9 {
+  padding: 0px;
 }
 
 .blogHeader {
