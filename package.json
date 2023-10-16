@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "tailwindcss build css/navbar.css -o public/styles.css",
     "watch": "tailwindcss -i ./src/style.css -o ./public/styles.css --watch",
-    "password-hashing": "node passwordHashing.js"
+    "password-hashing": "node passwordHashing.js",
+    "build": "tailwindcss -i public/css/style.css -o ./public/css/output.css"
   },
   "repository": {
     "type": "git",
