@@ -5,7 +5,6 @@ const path = require('path');
 const sequelize = require('./config/connection'); // Import the Sequelize connection
 const { User, Playlist } = require('./models'); // Import your models
 const authController = require('./controllers/authController'); // Import your auth controller
-const friendController = require('./controllers/friend-controller');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -82,21 +81,6 @@ app.get('/get-playlist', async (req, res) => {
     res.json(playlists);
   } catch (error) {
     console.error('Error fetching playlist data:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-// Serve the friend route to get a friend by ID
-app.get('/friend/:id', async (req, res) => {
-  try {
-    console.log('server: getting /friend/id')
-    const friendId = req.params.id; // Retrieve the friend's ID from the URL
-    // Query the database or perform other logic to retrieve the friend by ID
-    // Send the friend's data as a JSON response
-    // Example: const friend = await FriendModel.findByPk(friendId);
-    // res.json(friend);
-  } catch (error) {
-    console.error('Error fetching friend data:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
