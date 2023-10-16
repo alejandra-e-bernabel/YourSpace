@@ -3,7 +3,8 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const sequelize = require('./config/connection'); // Import the Sequelize connection
-const { User, Playlist } = require('./models'); // Import your models
+const User = require('./models/user') // Import your models
+const Playlist = require('./models/playlist'); // Import your models
 const authController = require('./controllers/authController'); // Import your auth controller
 const friendController = require('./controllers/authController'); // Import your friend controller
 
