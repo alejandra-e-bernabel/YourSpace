@@ -12,13 +12,45 @@ html, body {
 }
 
 body {
-    /* background-color: #AEB3CC; */
-    /* background-image: url("../images/dario-bronnimann-hNQwIirOseE-unsplash.jpg"); */
+    background-color: #AEB3CC;
+    background-image: url("../images/dario-bronnimann-hNQwIirOseE-unsplash.jpg");
 }
 
-/* .navbar {
-    position:static;
-} */
+.blogBody {
+  margin-left: 80px;
+}
+
+.blog-navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 700ms ease;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .blogBody {
+    margin-left: 0px;
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+  .blog-navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .blogBody {
+    margin-bottom: 70px;
+  }
+}
 
 .col-md-3, .col-md-9 {
   padding: 0px;
