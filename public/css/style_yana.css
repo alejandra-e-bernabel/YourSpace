@@ -1,101 +1,103 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* **********************************YANA STYLE.CSS */
-
+a {
+  text-decoration: none;
+}
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F4F4F4;
-    margin: 0;
-    padding: 0;
-  }
-  ​
-  header {
-    background-color: #26398C; /* Marian Blue */
-    color: #FFFFFF;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  ​
-  h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  ​
-  ​
-  main {
-    padding: 20px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  ​
-  .buttons-container {
-    text-align: center;
-    margin-top: 20vh;
-  }
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; 
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 10px;
-  }
-  ​
-  footer {
-    background-color: #AEB3CC; /* French Gray */
-    color: #FFFFFF;
-    text-align: center;
-    padding: 10px;
-  }
-  ​
-  /* Specific Styles for Login and Signup Pages */
-  .login-container, .signup-container {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #7673BF; /* Slate Blue */
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  ​
-  form {
-    margin-top: 20px;
-  }
-  ​
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #D89C83; /* Buff */
-  }
-  ​
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #EAD96C; /* Arylide Yellow */
-    border-radius: 3px;
-  }
-  ​
-  button {
-    background-color: #26398C; /* Marian Blue */
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  ​
-  button:hover {
-    background-color: #7673BF; /* Slate Blue */
-  }
+  background-image: url(/public/images/space.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-image {
+  width: 200px;
+  height: auto;
+  
+}
+/* .header-image-2 {
+  width: 200px;
+  height: auto;
+} */
+label {
+  font-family: "Raleway", sans-serif;
+  font-size: 11pt;
+}
+/* #forgot-pass {
+  color: #2dbd6e;
+  font-family: "Raleway", sans-serif;
+  font-size: 10pt;
+  margin-top: 3px;
+  text-align: right;
+} */
+#card {
+  background: #fbfbfb;
+  border-radius: 100px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 410px;
+  margin: 6rem auto 8.1rem auto;
+  width: 329px;
+}
+#card-content {
+  padding: 12px 44px;
+}
+#card-title {
+  font-family: "Raleway Thin", sans-serif;
+  letter-spacing: 4px;
+  padding-bottom: 23px;
+  padding-top: 13px;
+  text-align: center;
+}
+#signup {
+  color: #2dbd6e;
+  font-family: "Raleway", sans-serif;
+  font-size: 10pt;
+  margin-top: 16px;
+  text-align: center;
+}
+#submit-btn {
+  background: -webkit-linear-gradient(right, #fff195, #EAD96C);
+  border: none;
+  border-radius: 21px;
+  /* box-shadow: 0px 1px 8px #24c64f; */
+  cursor: pointer;
+  color: #7673BF;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: 0.25s;
+  width: 153px;
+}
+#submit-btn:hover {
+  box-shadow: 0px 1px 18px #26398C;
+}
+.form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.form-border {
+  /* background: -webkit-linear-gradient(right, #a6f77b, #2ec06f); */
+  background:#EAD96C;
+  height: 1px;
+  width: 100%;
+}
+.form-content {
+  background: #fbfbfb;
+  border: none;
+  outline: none;
+  padding-top: 14px;
+}
+.underline-title {
+  /* background: -webkit-linear-gradient(right, #a6f77b, #2ec06f); */
+  background: #EAD96C;
+  height: 2px;
+  margin: -1.1rem auto 0 auto;
+  width: 89px;
+}
+
 
