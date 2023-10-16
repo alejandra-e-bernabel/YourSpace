@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, '/')));
 
 // Define the controllers
 app.use('/auth', authController);
-app.use('/api', friendController);
+// app.use('/api', friendController);
 
 // Define the yourspace route to serve the login form
 app.get('/yourspace', (req, res) => {
