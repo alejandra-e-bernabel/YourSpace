@@ -1,7 +1,6 @@
 $(document).ready(function () {
-    let lastLoginTime = 1634035200000;
-    let lastLoginDate = moment(lastLoginTime).format("MMMM Do, YYYY [at] h:mm A");
-    $("#lastLogin").text("Last Login: " + lastLoginDate);
+    let lastLoginDate = getTimeAndDate();
+    $("#lastLogin").text("Last Online: " + lastLoginDate);
     //event listener on save buttons
     // this will aloow you to save events to local storage
     function saveEvent() {
@@ -10,6 +9,31 @@ $(document).ready(function () {
             let value = $(this).siblings('.bulletin-board').val();
             localStorage.setItem(key, value);
         });
+    }
+
+    function getTimeAndDate() {
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const day = date.getDay();
+        let hour = date.getHours();
+
+        const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][month];
+    
+        let hourString = "";
+    
+        if (hour>12) {
+            hour = hour-12;
+            hourString = hour + "PM";
+        } else if (hour == 0) {
+            hour = 12;
+            hourString = hour + "AM";
+        } else if (hour ==12) {
+            hourString = hour + "PM";
+        } else 
+            hourString = hour + "AM";
+        
+        return monthName + " " + day + ", " + year + " @ " + hourString;
     }
   
     // this function will get any user input that was saved to LS and set the values of the corrosponding text area elems
