@@ -1,14 +1,16 @@
+// updated 0652 10/17 tpf
 const router = require('express').Router();
 const Friend = require('../models/Friend');
+const path = require('path');
 
-router.get("/", async (req, res) => {
-  try {
-    res.sendFile(path.join(process.cwd(), "public/navbar.html"));
-  } catch (error) {
-    console.log(error);
-    res.status(500).send("Internal Server Error");
-  }
-});
+// router.get("/", async (req, res) => {
+//   try {
+//     res.sendFile(path.join(process.cwd(), "public/views/navbar.html"));
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).send("Internal Server Error");
+//   }
+// });
 
 router.get("/friend", async (req, res) => {
   try {
