@@ -23,7 +23,7 @@
     <header>
         <div class="flex flex-col items-center">
             <img src="../public/images/Spaceman.PNG" alt="Logo" class="h-80 w-50">
-            <img src="../public/images/yourSpaceGradient.PNG" alt="YourSpace" class="h-auto w-40">
+            <img src="../public/images/yourSpaceGradient.PNG" alt="YourSpace" class="h-10 w-20">
         </div>
     </header>
     <nav class="navbar">
@@ -36,7 +36,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="#" class="nav-link">
                     <i class="fa-solid fa-rocket icon"></i>
 
                     <span class="link-text">Home</span>
@@ -52,7 +52,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="#friends" class="nav-link">
                     <i class="fa-solid fa-meteor icon"></i>
 
                     <span class="link-text">Friends</span>
@@ -60,7 +60,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="#music" class="nav-link">
                     <i class="fa-solid fa-music icon"></i>
 
                     <span class="link-text">Music</span>
@@ -68,7 +68,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="#bulletin" class="nav-link">
                     <i class="fa-solid fa-moon icon"></i>
 
                     <span class="link-text">Bulletin Board</span>
@@ -76,7 +76,7 @@
             </li>
 
             <li class="nav-item" id="themeButton">
-                <a href="../views/index.html" class="nav-link">
+                <a href="../index.html" class="nav-link">
                     <i class="fa-brands fa-space-awesome icon"></i>
 
                     <span class="link-text"> Exit</span>
@@ -167,13 +167,7 @@
                         src="../public/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
                     <h5 id=bioUsername class="mb-1 text-2xl font-medium text-marian">Your Name</h5>
                     <!-- you can add a brief bio below -->
-                    <span id=shortBio class="text-sm text-gray-500 dark:text-gray-400">Brief Bio: Lorem ipsum dolor sit
-                        amet
-                        consectetur
-                        adipisicing
-                        elit. Aspernatur commodi, natus quia, non autem, consequatur hic velit provident accusantium
-                        nostrum
-                        cumque. Repellat, nisi vel ea eius architecto corrupti iure amet.</span>
+                    <span id=shortBio class="text-sm text-gray-500 dark:text-gray-400">Brief Bio:</span>
                     <div class="flex mt-4 space-x-3 md:mt-6">
                         <div class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-medium">
                             <p id="lastLogin"></p>
@@ -182,35 +176,38 @@
                 </div>
             </div>
 
-            <!-- music card where you can feature your fav songs -->
-            <div class="block max-w-sm p-5 bg-white border border-arylide rounded-lg shadow">
-                <div class="bg-buff rounded-lg p-2 text-center">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">My Music</h5>
+            <!-- top friends container  -->
+            <div class="flex flex-col space-y-4 flex-shrink max-w-sm p-6 bg-white border border-arylide rounded-lg shadow" id="friends">
+                <div class="bg-buff rounded-lg p-4 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Top Friends</h5>
                 </div>
-                <!-- <button id="getPlaylistButton" onclick="getPlaylist()"
-                    class="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-                    Get Your Playlist.
-                </button> -->
-                <div class="flex flex-col items-center">
-                    <button
-                        class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
-                        id="getPlaylistButton" onclick="getPlaylist()">
-                        <span
-                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                            Get Your Playlist
-                        </span>
-                    </button>
-                </div>
-                <div id="musicListContainer">
-                    <!-- Display the user's music list here -->
-                </div>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="../public/images/friend-Alejandra.jpg" alt="placeholder image" />
+                    <p>Alejandra Bernabel</p>
+                </a>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="../public/images/friend-Nicole.jpg" alt="placeholder image" />
+                    <p>Nicole Torres</p>
+                </a>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="../public/images/friend-Tom.jpg" alt="placeholder image" />
+                    <p>Tom Fusco</p>
+                </a>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="../public/images/Friend-Madeleine.jpg" alt="placeholder image" />
+                    <p>Madeleine Abraham</p>
+                </a>
+                <a href="#"><img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                    src="../public/images/friend-Yana.jpg" alt="placeholder image" />
+                <p>Yana Mishyna</p>
+            </a>
             </div>
         </div>
 
 
         <!-- the bulletin board allows the user to post short snippets of comments  -->
         <div class="flex flex-col space-y-4 flex-shrink">
-            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
+            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow" id="bulletin">
                 <div class="bg-buff rounded-lg p-4 text-center">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Bulletin Board</h5>
                 </div>
@@ -272,66 +269,31 @@
                 </div>
             </div>
 
-        </div>
-
-        <!-- you can add and delete your top friends for other users to see -->
-        <div class="container" id="friends-container" >
-            <h2 class="p-5 text-3xl">My Top Friends!</h2>
-            <div class="container1">
-                <div>
-                    <div class="draggable" draggable="true">
-                        <img class="avatar" src="../public/images/friend-Alejandra.jpg"
-                            alt="Photo of a couple at a wedding looking happy and cutting a cake" />
-                        <p class="name">
-                            <p2 class="number">1. </p2>Alejandra Bernabel
-                        </p>
-                    </div>
+            <!-- music card where you can feature your fav songs -->
+            <div class="block max-w-sm p-5 bg-white border border-arylide rounded-lg shadow" id="music">
+                <div class="bg-buff rounded-lg p-2 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">My Music</h5>
                 </div>
-                <div>
-                    <div class="draggable" draggable="true">
-                        <img class="avatar" src="../public/images/friend-Nicole.jpg"
-                            alt="Photo of a curly haired female taking a selfie with the Puerto Rico flag behind her and smiling" />
-                        <p class="name">
-                        <p class="name">
-                            <p2 class="number">2. </p2>Nicole Torres
-                        </p>
-                    </div>
+                <!-- <button id="getPlaylistButton" onclick="getPlaylist()"
+                    class="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+                    Get Your Playlist.
+                </button> -->
+                <div class="flex flex-col items-center">
+                    <button
+                        class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+                        id="getPlaylistButton" onclick="getPlaylist()">
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Get Your Playlist
+                        </span>
+                    </button>
                 </div>
-                <div>
-                    <div class="draggable" draggable="true">
-                        <img class="avatar" src="../public/images/friend-Tom.jpg"
-                            alt="Photo of a male taking a selfie and smiling at camera " />
-                        <p class="name">
-                        <p class="name">
-                            <p2 class="number">3. </p2>Tom Fusco
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <div class="draggable" draggable="true">
-                        <img class="avatar" src="../public/images/Friend-Madeleine.jpg"
-                            alt="Photo of a female taking a selfie with her right arm touching her hair and looking at the camera " />
-                        <p class="name">
-                        <p class="name">
-                            <p2 class="number">4. </p2>Madeleine Abraham
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <div class="draggable" draggable="true">
-                        <img class="avatar" src="../public/images/friend-Yana.jpg"
-                            alt="Photo of a female taking a selfie at a 45 degree angle with a soft smile" />
-                        <p class="name">
-                        <p class="name">
-                            <p2 class="number">5. </p2>Yana Mishyna
-                        </p>
-                    </div>
+                <div id="musicListContainer">
+                    <!-- Display the user's music list here -->
                 </div>
             </div>
-            <!-- <div class="container2" id="friendContainer">
-                friend images go here
-            </div> -->
-            <!-- <button class="edit">Edit/Add Friends</button> -->
+            
+        </div>
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>

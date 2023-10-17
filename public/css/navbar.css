@@ -180,7 +180,7 @@ border: 3px solid rgb(238, 226, 12);
 width: 100px; 
     
 }
-.container{
+/* .container{
 width: 20%;
 border: 1px solid   #EAD96C;
 padding-bottom: 10px;
@@ -211,7 +211,7 @@ color:rgb(245, 245, 159);
 border-radius: 5px;
 padding: 10px;
 font-size: 15px;
-}
+} */
 
 /* .edit:hover{
 background-color: cornflowerblue;
@@ -219,10 +219,10 @@ transition: 200ms ease-in-out;
 } */
 
 
-.container2{
+/* .container2{
 display: flex; 
 flex-direction: row;
-/* width: 150px; */
+width: 150px;
 overflow-wrap: break-word;
 } 
 
@@ -237,4 +237,4 @@ overflow-wrap: break-word;
 .draggable.dragging {
   opacity: 0.5;
   user-select: none;
-}
+} */
