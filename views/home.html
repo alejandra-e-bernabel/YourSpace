@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/css/navbar.css">
-    <link rel="stylesheet" href="../public/css/friends.css">
     <link rel="stylesheet" href="../public/css/bio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
@@ -29,67 +28,68 @@
     </header>
     <nav class="navbar">
         <ul class="navbar-nav">
-          <li class="logo">
-            <a href="#" class="nav-link">
-              <span class="link-text logo-text">YourSpace </span>
-              <i class="fa-solid fa-user-astronaut slow-spin "></i>
-            </a>
-          </li>
-    
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-             <i class="fa-solid fa-rocket icon"></i>
-              
-              <span class="link-text">Home</span>
-            </a>
-          </li>
-    
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fa-regular fa-star icon"></i>
-              
-              <span class="link-text">Blog</span>
-            </a>
-          </li>
-    
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-               <i class="fa-solid fa-meteor icon"></i>
-              
-              <span class="link-text">Friends</span>
-            </a>
-          </li>
-    
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-             <i class="fa-solid fa-music icon"></i>
-             
-              <span class="link-text">Music</span>
-            </a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fa-solid fa-moon icon"></i>
-            
-              <span class="link-text">Bulletin Board</span>
-            </a>
-          </li>
-    
-          <li class="nav-item" id="themeButton">
-            <a href="#" class="nav-link">
-            <i class="fa-brands fa-space-awesome icon"></i>
-           
-              <span class="link-text"> Exit</span>
-            </a>
-          </li>
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <span class="link-text logo-text">YourSpace </span>
+                    <i class="fa-solid fa-user-astronaut slow-spin"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-rocket icon"></i>
+
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="../views/blog.html" class="nav-link">
+                    <i class="fa-regular fa-star icon"></i>
+
+                    <span class="link-text">Blog</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="fa-solid fa-meteor icon"></i>
+
+                    <span class="link-text">Friends</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-music icon"></i>
+
+                    <span class="link-text">Music</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-moon icon"></i>
+
+                    <span class="link-text">Bulletin Board</span>
+                </a>
+            </li>
+
+            <li class="nav-item" id="themeButton">
+                <a href="../views/index.html" class="nav-link">
+                    <i class="fa-brands fa-space-awesome icon"></i>
+
+                    <span class="link-text"> Exit</span>
+                </a>
+            </li>
         </ul>
-      </nav> 
+    </nav>
     <!-- code for editing bio popup window -->
     <div id="editPopupContainer" class="hidden editBioWindow">
         <!-- <button id="bioEditButton">Edit Bio</button> -->
         <button
-            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+            id="bioEditButton">
             <span
                 class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Edit Bio
@@ -97,7 +97,8 @@
         </button>
         <!-- <button id="nameEditButton">Edit Name</button> -->
         <button
-            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+            id="nameEditButton">
             <span
                 class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Edit Name
@@ -110,7 +111,8 @@
             I'm done editing!
         </button> -->
         <button
-            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
+            id="closeEditWindow">
             <span
                 class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 I'm done editing!
@@ -160,7 +162,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="flex flex-col items-center p-6">
+                <div class="flex flex-col items-center p-8">
                     <img class="w-24 h-24 mb-3 rounded-full shadow-lg"
                         src="../public/images/laura-vinck-Hyu76loQLdk-unsplash.jpg" alt="placeholder image" />
                     <h5 id=bioUsername class="mb-1 text-2xl font-medium text-marian">Your Name</h5>
@@ -180,34 +182,29 @@
                 </div>
             </div>
 
-
-
-            <!-- contact card section, this will take you to various links thruout the page  -->
-            <!-- <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow hover:bg-blue">
-                <div class="bg-buff p-4 rounded-lg text-center">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Contacting card</h5>
+            <!-- music card where you can feature your fav songs -->
+            <div class="block max-w-sm p-5 bg-white border border-arylide rounded-lg shadow">
+                <div class="bg-buff rounded-lg p-2 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">My Music</h5>
                 </div>
+                <!-- <button id="getPlaylistButton" onclick="getPlaylist()"
+                    class="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+                    Get Your Playlist.
+                </button> -->
                 <div class="flex flex-col items-center">
-                    <a href="#">
-                        <button
-                            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-                            <span
-                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                Friends List
-                            </span>
-                        </button>
-                    </a>
-                    <a href="#">
-                        <button
-                            class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-                            <span
-                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                Blog
-                            </span>
-                        </button>
-                    </a>
+                    <button
+                        class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+                        id="getPlaylistButton" onclick="getPlaylist()">
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Get Your Playlist
+                        </span>
+                    </button>
                 </div>
-            </div> -->
+                <div id="musicListContainer">
+                    <!-- Display the user's music list here -->
+                </div>
+            </div>
         </div>
 
 
@@ -275,24 +272,11 @@
                 </div>
             </div>
 
-            <!-- music card where you can feature your fav songs -->
-            <div class="block max-w-sm p-6 bg-white border border-arylide rounded-lg shadow">
-                <div class="bg-buff rounded-lg p-4 text-center">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-marian">Music card</h5>
-                </div>
-                <button id="getPlaylistButton" onclick="getPlaylist()"
-                    class="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-                    Get Your Playlist.
-                </button>
-                <div id="musicListContainer">
-                    <!-- Display the user's music list here -->
-                </div>
-            </div>
         </div>
 
-         <!-- you can add and delete your top friends for other users to see -->
-        <div class="container">
-            <h2 class="p-5">My Top Friends!</h2>
+        <!-- you can add and delete your top friends for other users to see -->
+        <div class="container" id="friends-container" >
+            <h2 class="p-5 text-3xl">My Top Friends!</h2>
             <div class="container1">
                 <div>
                     <div class="draggable" draggable="true">
@@ -344,10 +328,10 @@
                     </div>
                 </div>
             </div>
-            <div class="container2" id="friendContainer">
-                <!-- friend images go here -->
-            </div>
-            <button class="edit">Edit/Add Friends</button>
+            <!-- <div class="container2" id="friendContainer">
+                friend images go here
+            </div> -->
+            <!-- <button class="edit">Edit/Add Friends</button> -->
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>

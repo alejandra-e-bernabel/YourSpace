@@ -66,16 +66,16 @@ main {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
   color: var(--text-secondary);
-  background-image: url("/images/space.jpg");
+  background-image: url("../images/space.jpg");
 }
 
 .link-text {
   display: none;
   margin-left: 1rem;
 }
-/* .link-text:hover{
-   /* transform: scale(1.2); 
-} */
+.link-text:hover{
+   transform: scale(1.2); 
+} 
 
 .nav-link svg {
   width: 2rem;
@@ -181,16 +181,18 @@ width: 100px;
     
 }
 .container{
-width: 69%;
-border: 3px solid   #26398C;
-padding-bottom: 20px;
+width: 20%;
+border: 1px solid   #EAD96C;
+padding-bottom: 10px;
 text-align: center;
-background-color: #EAD96C;
+background-color: #ffffff;
 color: #26398C;
 border-radius: 10px;
 }
+
 .container1{
 display: flex;
+justify-content: center;
 }
 
 
@@ -211,16 +213,16 @@ padding: 10px;
 font-size: 15px;
 }
 
-.edit:hover{
+/* .edit:hover{
 background-color: cornflowerblue;
 transition: 200ms ease-in-out;
-}
+} */
 
 
 .container2{
 display: flex; 
 flex-direction: row;
-width: 150px;
+/* width: 150px; */
 overflow-wrap: break-word;
 } 
 
