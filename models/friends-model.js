@@ -1,13 +1,9 @@
-// Import necessary Sequelize classes and the database connection instance
-// const { Model, DataTypes } = require('sequelize');
+// const { Model, DataTypes } = require("sequelize");
 
-// Define the Friend model by extending the Model class
-// const sequelize = require('../config/connection');
-
+// const sequelize = require("../config/connection");
 
 // class Friend extends Model {}
 
-// Initialize column definitions
 // Friend.init(
 //   {
 //     id: {
@@ -32,7 +28,7 @@
 //     timestamps: false,
 //     freezeTableName: true,
 //     underscored: true,
-//     modelName: "friend",
+//     modelName: "friends",
 //   }
 // );
 

@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, '/')));
 
 // Define the controllers
 app.use('/auth', authController);
-app.use('/friend', friendController);
+// app.use('/friend', friendController);
 
 // Define the yourspace route to serve the login form
 app.get('/yourspace', (req, res) => {
@@ -96,6 +96,22 @@ app.get('/get-playlist', async (req, res) => {
   }
 });
 
+<<<<<<< Updated upstream
+=======
+// Serve the friend route to get a friend by ID
+// app.get('/friend/:id', async (req, res) => {
+//   try {
+//     console.log('server: getting /friend/id');
+//     const friendId = req.params.id; // Retrieve the friend's ID from the URL
+//     // Query the database or perform other logic to retrieve the friend by ID
+//     // Example: const friend = await FriendModel.findByPk(friendId);
+//     // res.json(friend);
+//   } catch (error) {
+//     console.error('Error fetching friend data:', error);
+//     res.status(500).json({ error: 'Internal server error' });
+//   }
+// });
+>>>>>>> Stashed changes
 
 // localhost:4000/blog will take us to /public/blog.html
 app.get("/blog", (req, res) =>
