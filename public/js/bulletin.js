@@ -15,7 +15,7 @@ $(document).ready(function () {
         const date = new Date();
         const year = date.getFullYear();
         const month = date.getMonth();
-        const day = date.getDay();
+        const day = date.getDate();
         let hour = date.getHours();
 
         const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][month];
