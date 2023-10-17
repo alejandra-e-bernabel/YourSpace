@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const playlistRoutes = require('./playlist-routes');
 // const authRoutes = require('./authRoutes');
-const userRoutes = require('./userRoutes');
+// const userRoutes = require('./userRoutes');
 // const homeRoutes = require('./homeRoutes');
 router.use('/', homeRoutes); // Home route
 
