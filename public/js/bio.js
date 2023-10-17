@@ -58,6 +58,8 @@ nameSaveButton.addEventListener("click", function () {
     bioSaveButton.classList.add("hidden");
     bioButton.classList.remove("hidden");
     nameButton.classList.remove("hidden");
+    closeEditWindow.classList.remove("hidden");
+
 
     let newName = nameInput.value;
 
@@ -78,6 +80,8 @@ bioSaveButton.addEventListener("click", function () {
     bioSaveButton.classList.add("hidden");
     bioButton.classList.remove("hidden");
     nameButton.classList.remove("hidden");
+    closeEditWindow.classList.remove("hidden");
+
 
     let newBio = bioInput.value;
 
