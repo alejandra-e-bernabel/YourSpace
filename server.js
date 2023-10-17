@@ -96,8 +96,6 @@ app.get('/get-playlist', async (req, res) => {
   }
 });
 
-<<<<<<< Updated upstream
-=======
 // Serve the friend route to get a friend by ID
 // app.get('/friend/:id', async (req, res) => {
 //   try {
@@ -111,7 +109,6 @@ app.get('/get-playlist', async (req, res) => {
 //     res.status(500).json({ error: 'Internal server error' });
 //   }
 // });
->>>>>>> Stashed changes
 
 // localhost:4000/blog will take us to /public/blog.html
 app.get("/blog", (req, res) =>
