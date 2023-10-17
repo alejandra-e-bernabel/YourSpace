@@ -2,7 +2,7 @@
 // so that they can be easily imported and used in other parts of the application.
 
 const Playlist = require('./playlist');
-const User = require('./User');
+const User = require('./user');
 const Friend = require('./Friend');
 
 // export models

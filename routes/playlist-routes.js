@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Playlist = require('../models/Playlist'); // Specify the model file explicitly
+const Playlist = require('../models/playlist'); // Specify the model file explicitly
 
 // Define routes for playlists
 
