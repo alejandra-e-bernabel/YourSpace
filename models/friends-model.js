@@ -1,36 +1,25 @@
-const { Model, DataTypes } = require('sequelize');
+const mongoose = require("mongoose");
 
-const sequelize = require('../config/connection');
-
-
-class Friend extends Model {}
-
-Friend.init(
+// Define the Friend schema
+const friendSchema = new mongoose.Schema(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-      allowNull: false,
-    },
     friend_name: {
-      type: DataTypes.STRING,
-      primaryKey: true,
-      allowNull: false,
+      type: String,
+      required: true,
     },
     image_path: {
-      type: DataTypes.STRING,
-      primaryKey: true,
-      allowNull: false,
+      type: String,
+      required: true,
     },
   },
   {
-    sequelize,
+    // Define Mongoose schema configuration options
     timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "friends",
+    collection: "friends", // Specify the collection name (optional)
   }
 );
+
+// Create the Friend model based on the schema
+const Friend = mongoose.model("Friend", friendSchema);
 
 module.exports = Friend;

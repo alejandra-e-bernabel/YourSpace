@@ -18,8 +18,6 @@ This web application interface is a blast from the past as it replicates the nos
 ## Badges
 ![dotenv](https://img.shields.io/badge/dotenv-blue.svg)
 ![Express](https://img.shields.io/badge/Express-red.svg)
-![MySQL2](https://img.shields.io/badge/MySQL2-blue.svg)
-![Sequelize](https://img.shields.io/badge/Sequelize-blue.svg)
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow.svg)
 ![npm](https://img.shields.io/badge/npm-6.14.4-blue.svg)
 ![node.js](https://img.shields.io/badge/node.js-12.0-green.svg)
@@ -69,6 +67,28 @@ GIVEN a functional Social Media SPA
 
 ## License
 ![Github License](https://img.shields.io/badge/License-MIT-blue.svg)
+
+MIT License
+
+Copyright (c) 2023 alejandra-e-bernabel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## Contributing
 This Application was Made with the contributions of:

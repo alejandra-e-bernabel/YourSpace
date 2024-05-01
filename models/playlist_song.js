@@ -1,41 +1,23 @@
-// Import necessary Sequelize classes and the database connection instance
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const mongoose = require("mongoose");
 
-// Define the Playlist_Song model by extending the Model class
-class Playlist_Song extends Model {}
-
-// Initialize column definitions
-Playlist_Song.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    song_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'song', // Referencing the 'song' table
-        key: 'id',     // Referencing the 'id' column in the 'song' table
-      },
-    },
-    order: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
+// Define the Playlist schema
+const playlistSchema = new mongoose.Schema({
+  song_title: {
+    type: String,
+    required: true,
   },
-  // Define Sequelize model configuration options
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'playlist_song', // Correct the modelName to 'playlist_song'
-  }
-);
+  artist: String,
+  audio_path: {
+    type: String,
+    required: true,
+  },
+  user_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User", // Referencing the 'User' model
+  },
+});
 
-// Export the initialized Sequelize model instance
-module.exports = Playlist_Song;
+// Create the Playlist model based on the schema
+const Playlist = mongoose.model("Playlist", playlistSchema);
+
+module.exports = Playlist;

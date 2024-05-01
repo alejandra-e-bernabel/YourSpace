@@ -1,9 +1,11 @@
 require("dotenv").config();
 const express = require("express");
+const db = require("./config/connection.js");
+const mongoose = require("mongoose");
 const routes = require("./routes/friends-route.js");
-const sequelize = require("./config/connection.js");
 
-const Friends = require("./models/friends-model");
+
+// const Friends = require("./models/friends-model");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -16,7 +18,8 @@ app.use(express.static("public"));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
+db.once("open", () => {
+  app.listen(PORT, () => {
+    console.log(`Now listening on port ${PORT}`);
+  });
 });
-

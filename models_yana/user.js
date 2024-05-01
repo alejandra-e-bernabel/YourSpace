@@ -1,60 +1,53 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
-​
-class User extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
-​
-User.init(
+const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+
+// Define the User schema
+const userSchema = new mongoose.Schema(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: String,
+      required: true,
     },
     email: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: String,
+      required: true,
       unique: true,
       validate: {
-        isEmail: true,
+        validator: function (v) {
+          return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
+        },
+        message: (props) => `${props.value} is not a valid email address!`,
       },
     },
     password: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: String,
+      required: true,
       validate: {
-        len: [8], // Minimum password length
+        validator: function (v) {
+          return v.length >= 8;
+        },
+        message: (props) => `Password must be at least 8 characters long!`,
       },
     },
   },
   {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10); // Hash the password with bcrypt
-        return newUserData;
-      },
-      beforeUpdate: async (updatedUserData) => {
-        if (updatedUserData.password) {
-          updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        }
-        return updatedUserData;
-      },
-    },
-    sequelize,
-    timestamps: false, // Disable timestamps
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'user', // Set the model name to 'user'
+    // Define Mongoose schema configuration options
+    timestamps: false,
+    collection: "users", // Specify the collection name (optional)
   }
 );
-​
+
+// Define pre-save hook to hash password before saving
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) {
+    return next();
+  }
+  const saltRounds = 10;
+  this.password = await bcrypt.hash(this.password, saltRounds);
+  next();
+});
+
+// Create the User model based on the schema
+const User = mongoose.model("User", userSchema);
+
 module.exports = User;

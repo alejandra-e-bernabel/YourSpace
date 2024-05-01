@@ -1,52 +1,26 @@
-// defines Sequelize model for the "song" table and imports Sequalize classes: Model and and Datatypes.
-// imports Sequalize class instance from connection.js for database connection to enable this module to 
-// define the model and associate it with the database connection.
 
-const { Model, DataTypes } = require('sequelize');
+const mongoose = require("mongoose");
 
-const sequelize = require('../config/connection.js');
-
-// create instance of Model
-class Song extends Model { }
-
-// initialize column definitions
-Song.init(
+// Define the Song schema
+const songSchema = new mongoose.Schema(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     song_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: String,
+      required: true,
     },
-    duration: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    artist_name: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    genre: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    release_date: {
-      type: DataTypes.DATE,
-      allowNull: true,
-    },
+    duration: Number,
+    artist_name: String,
+    genre: String,
+    release_date: Date,
   },
-  // define Sequalize model configuration options
   {
-    sequelize,
+    // Define Mongoose schema configuration options
     timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'song',
+    collection: "songs", // Specify the collection name (optional)
   }
 );
-// export initialized Sequelize model instance
+
+// Create the Song model based on the schema
+const Song = mongoose.model("Song", songSchema);
+
 module.exports = Song;
