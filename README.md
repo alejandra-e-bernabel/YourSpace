@@ -8,10 +8,8 @@ This web application interface is a blast from the past as it replicates the nos
 - [Description](#description)
 - [Badges](#badges)
 - [Installation](#install)
-- [User-story](#user-story)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contributing)
 - [GitHub-repository](#github-repository)
 - [Deployed-application-link](#deployed-application-link)
 
@@ -39,20 +37,6 @@ git clone git@github.com:alejandra-e-bernabel/YourSpace.git
 npm install 
 ```
     
-## User-Story
-GIVEN a functional Social Media SPA 
-- WHEN I am presented with a log in page and I either choose to log in or sign up
-  -  THEN I am able to resume as I left off previously or create a new account to allow access to the application
-- WHEN I click "edit my profile",I have the ability to change my avatar, and my personal information
-  -  THEN It will be customized to the most up to date information about me.
-- WHEN I click on the music playlist icon
-  -  THEN I am able to select the song choice I would like for my personal page to play when other viewers visit 
-- WHEN I click "my top five friends"
-  -  THEN I am able to not only view the current friends but also switch out the friends in the order I choose
-- WHEN I open the blog tag
-  -  THEN the am transported to a seperate HTML page where I am able to view my blog posts as well as edit and delete to my liking
-- WHEN I view my bulletin board
-  -  THEN I am able to see what information I deem important for others to see when they open my page
 
 ## Usage
 1. Open webpage
@@ -90,25 +74,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Contributing
-This Application was Made with the contributions of:
-- Madeleine Abraham
-  -  Github : https://github.com/MadeleineA42
-- Nicole Torres 
-    -  Github : https://github.com/NicoleT27
-- Alejandra Bernabel 
-    - Github : https://github.com/alejandra-e-bernabel
-- Yana Mishyna 
-    - Github : https://github.com/Ymishyna
-- Thomas Fusco 
-    - Github : https://github.com/smokerdog57
 
 
 ## GitHub-repository
-https://github.com/alejandra-e-bernabel/YourSpace
+https://github.com/NicoleT27/YourSpace
 
 ## Deployed-application-link
-https://your-space-b0e277e1dff1.herokuapp.com/
+
 
 
 
